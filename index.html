@@ -1,579 +1,1061 @@
-<!DOCTYPE html>
-<html lang="pt">
+﻿<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-  <title>Portifólio</title>
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:description"
-        content="UI Designer Moçambicano, Web Designer Moçambicano, Desenvolvedor Web Moçambicano">
-  <meta property="og:image" content="assets/img/logo/favico.webp">
-  <meta name="twitter:title" content="Portifolio ">
-  <meta property="og:type" content="Adérito De Barros">
-  <meta name="twitter:image" content="assets/img/logo/favico.webp">
-  <meta name="description" content="UI Designer Moçambicano, Web Designer Moçambicano, Desenvolvedor Web Moçambicano">
-  <link rel="icon" type="image/webp" sizes="540x540" href="assets/img/logo/favico.webp">
-  <link rel="icon" type="image/webp" sizes="540x540" href="assets/img/logo/favico.webp">
-  <link rel="icon" type="image/webp" sizes="540x540" href="assets/img/logo/favico.webp">
-  <link rel="icon" type="image/webp" sizes="540x540" href="assets/img/logo/favico.webp">
-  <link rel="icon" type="image/webp" sizes="540x540" href="assets/img/logo/favico.webp">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&amp;display=swap">
-  <link rel="stylesheet" href="assets/css/styles.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.8/fancybox/fancybox.min.css">
-  <meta name="google-site-verification" content="nI3r9xHXNdciXeEVFq7srtCUQ9Nsod-2tNV_tfK7RYU" />
+
+  <!-- Viewport -->
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+
+  <!-- SEO meta tags -->
+  <title>Adérito De Barros | Full-Stack Developer</title>
+  <meta name="description"
+    content="Portfólio de Adérito De Barros - Desenvolvedor Web Full-Stack especializado em Laravel, Vue.js e soluções digitais em Moçambique.">
+  <meta name="keywords"
+    content="web developer, fullstack, laravel, vue.js, moçambique, sites, aplicativos, programador, adérito de barros">
+  <meta name="author" content="Adérito De Barros">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/webp" href="assets/img/logo/favico.webp">
+
+
+  <!-- Theme switcher (color modes) -->
+  <script src="around.createx.studio/assets/js/theme-switcher.js"></script>
+
+  <!-- Import Google font (Inter) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" id="google-font">
+
+  <!-- Vendor styles -->
+  <link rel="stylesheet" media="screen" href="around.createx.studio/assets/vendor/aos/dist/aos.css">
+  <link rel="stylesheet" media="screen" href="around.createx.studio/assets/vendor/swiper/swiper-bundle.min.css">
+
+  <!-- Font icons -->
+  <link rel="stylesheet" href="around.createx.studio/assets/icons/around-icons.min.css">
+
+  <!-- Theme styles + Bootstrap -->
+  <link rel="stylesheet" media="screen" href="around.createx.studio/assets/css/theme.min.css">
+
+  <!-- Customizer generated styles -->
+  <style id="customizer-styles"></style>
+
+  <!-- Page loading styles -->
+  <style>
+    .page-loading {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      -webkit-transition: all .4s .2s ease-in-out;
+      transition: all .4s .2s ease-in-out;
+      background-color: #fff;
+      opacity: 0;
+      visibility: hidden;
+      z-index: 9999;
+    }
+
+    [data-bs-theme="dark"] .page-loading {
+      background-color: #121519;
+    }
+
+    .page-loading.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .page-loading-inner {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      -webkit-transition: opacity .2s ease-in-out;
+      transition: opacity .2s ease-in-out;
+      opacity: 0;
+    }
+
+    .page-loading.active>.page-loading-inner {
+      opacity: 1;
+    }
+
+    .page-loading-inner>span {
+      display: block;
+      font-family: "Inter", sans-serif;
+      font-size: 1rem;
+      font-weight: normal;
+      color: #6f788b;
+    }
+
+    [data-bs-theme="dark"] .page-loading-inner>span {
+      color: #fff;
+      opacity: .6;
+    }
+
+    .page-spinner {
+      display: inline-block;
+      width: 2.75rem;
+      height: 2.75rem;
+      margin-bottom: .75rem;
+      vertical-align: text-bottom;
+      background-color: #d7dde2;
+      border-radius: 50%;
+      opacity: 0;
+      -webkit-animation: spinner .75s linear infinite;
+      animation: spinner .75s linear infinite;
+    }
+
+    [data-bs-theme="dark"] .page-spinner {
+      background-color: rgba(255, 255, 255, .25);
+    }
+
+    @-webkit-keyframes spinner {
+      0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+      }
+
+      50% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+      }
+    }
+
+    @keyframes spinner {
+      0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+      }
+
+      50% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+      }
+    }
+  </style>
+
+  <!-- Page loading scripts -->
+  <script>
+    (function () {
+      window.onload = function () {
+        const preloader = document.querySelector('.page-loading')
+        preloader.classList.remove('active')
+        setTimeout(function () {
+          preloader.remove()
+        }, 1500)
+      }
+    })()
+  </script>
+
+
 </head>
-<body data-bs-target="#nav" data-bs-spy="scroll" data-bs-smooth-scroll="true">
-<nav class="navbar navbar-dark navbar-expand-md fixed-top bg-dark">
-  <div class="container"><a class="navbar-brand" href="index.html"><img class="img-fluid"
-                                                                        src="assets/img/logo/Logo-Adérito-White.webp"></a>
-    <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#nav"><span class="visually-hidden">Toggle navigation</span><span
-            class="navbar-toggler-icon"></span></button>
-    <div class="collapse navbar-collapse justify-content-end" id="nav">
-      <ul class="navbar-nav">
-        <li class="nav-item mx-2"><a class="nav-link active d-flex flex-column"
-                                     href="#inicio">Inicio<span></span></a></li>
-        <li class="nav-item mx-2"><a class="nav-link d-flex flex-column"
-                                     href="#servicos">habilidades<span></span></a></li>
-        <li class="nav-item mx-2"><a class="nav-link d-flex flex-column"
-                                     href="#trabalhos">Trabalhos<span></span></a></li>
-        <li class="nav-item mx-2"><a class="nav-link d-flex flex-column" href="#acerca">Acerca<span></span></a>
-        </li>
-        <li class="nav-item mx-2"><a class="btn btn-outline-danger shadow" role="button" href="#contacto">
-          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
-               viewBox="0 0 16 16" class="bi bi-telephone me-2">
-            <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"></path>
-          </svg>
-          CONTACTO</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-<div class="container inicio py-5 mt-5" id="inicio">
-  <div class="row inicio">
-    <div class="col d-flex flex-column justify-content-center">
-      <div class="text-center caption v-middle mb-4"><h1
-              class="text-start d-none d-md-block cd-headline clip head"><span class="blc">Olá sou</span><br><span
-              class="cd-words-wrapper"><b
-              class="is-visible">UI Designer.</b><b>Desenvolvedor Web.</b><b>Criativo.</b></span><span
-              class="flash animated infinite blc">| </span></h1>
-        <h1 class="text-start d-block d-md-none cd-headline clip"><span class="blc">Olá sou</span><br><span
-                class="cd-words-wrapper"><b class="is-visible">UI Designer.</b><b>Desenvolvedor Web.</b><b>Criativo.</b></span><span
-                class="flash animated infinite blc">| </span></h1></div>
-      <div class="mt-5"><a class="btn btn-outline-danger" role="button">Vamos Iniciar&nbsp;<svg
-              xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16"
-              class="bi bi-arrow-right">
-        <path fill-rule="evenodd"
-              d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
-      </svg>
-      </a></div>
-    </div>
-    <div class="col-4 d-none d-lg-flex flex-column justify-content-center imagem">
-      <div class="photo"></div>
-    </div>
-  </div>
-  <div class="row gx-3 gy-3 row-cols-1 row-cols-md-2 row-cols-lg-4 card-info pt-0 my-5">
-    <div class="col">
-      <div class="card text-light bg-dark">
-        <div class="card-body">
-          <div class="mb-5 mt-4">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
-                 viewBox="0 0 16 16" class="bi bi-palette-fill">
-              <path d="M12.433 10.07C14.133 10.585 16 11.15 16 8a8 8 0 1 0-8 8c1.996 0 1.826-1.504 1.649-3.08-.124-1.101-.252-2.237.351-2.92.465-.527 1.42-.237 2.433.07zM8 5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm4.5 3a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM5 6.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm.5 6.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"></path>
-            </svg>
-          </div>
-          <div class="my-4"><h3>Designer UI</h3><span></span></div>
-          <div><p>UI designer, ou designer de interface do usuário, promove a criação e o desenvolvimento da
-            interface explorada pelo usuário em um produto ou serviço, ou seja, criação de layouts e o
-            cenário de interação do usuário em determinadas plataformas.</p></div>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card text-light bg-dark">
-        <div class="card-body">
-          <div class="mb-5 mt-4">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
-                 viewBox="0 0 16 16" class="bi bi-code-slash">
-              <path d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z"></path>
-            </svg>
-          </div>
-          <div class="my-4"><h3>Desenvolvedor Full-Stack</h3><span></span></div>
-          <div>
-            <p>
-              é o processo de desenvolvimento do front-end e do back-end das aplicações. Qualquer aplicação tem um
-              componente de front-end (voltado para o usuário) e um componente de back-end (banco de dados e lógica).
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card text-light bg-dark">
-        <div class="card-body">
-          <div class="mb-5 mt-4">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
-                 viewBox="0 0 16 16" class="bi bi-bar-chart">
-              <path d="M4 11H2v3h2v-3zm5-4H7v7h2V7zm5-5v12h-2V2h2zm-2-1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1h-2zM6 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm-5 4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-3z"></path>
-            </svg>
-          </div>
-          <div class="my-4"><h3>SEO</h3><span></span></div>
-          <div>
-            <p>
-              é o conjunto de técnicas usadas, geralmente divididas entre tecnologia, conteúdo e
-              autoridade, para alcançar bom posicionamento de páginas de um site no Google e em outros
-              buscadores, gerando tráfego orgânico.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card text-light bg-dark">
-        <div class="card-body">
-          <div class="mb-5 mt-4">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
-                 viewBox="0 0 16 16" class="bi bi-columns-gap">
-              <path d="M6 1v3H1V1h5zM1 0a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1H1zm14 12v3h-5v-3h5zm-5-1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1h-5zM6 8v7H1V8h5zM1 7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H1zm14-6v7h-5V1h5zm-5-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1h-5z"></path>
-            </svg>
-          </div>
-          <div class="my-4"><h3>Responsividade</h3><span></span></div>
-          <div><p>Um site responsivo é aquele projetado para se adaptar a qualquer tipo de resolução, sem
-            distorções. Suas vantagens derivam da adaptação a qualquer ferramenta que os usuários estejam
-            usando para facilitar a sua visualização.</p></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="d-flex justify-content-center align-items-center barra"><span></span></div>
-</div>
-<div class="container servicos" id="servicos">
-  <div class="section-info"><span></span>
-    <h1>Habilidades.</h1>
-    <small class="text-uppercase">Trabalho consigo, não para si</small>
-  </div>
 
-  <div class="container">
 
-    <h3>Frontend</h3>
-    <div class="row gx-3 gy-3 row-cols-1 row-cols-md-2 row-cols-lg-3">
-      <div class="col">
-        <div class="card">
-          <div class="card-body d-flex justify-content-between align-items-center">
-            <p class="mb-0">
-              HTML
-            </p>
-            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
-                 viewBox="0 0 16 16" class="bi bi-arrow-right">
-              <path fill-rule="evenodd"
-                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
-            </svg>
-          </div>
-        </div>
-      </div>
+<!-- Body -->
 
-      <div class="col">
-        <div class="card">
-          <div class="card-body d-flex justify-content-between align-items-center">
-            <p class="mb-0">
-              CSS
-            </p>
-            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
-                 viewBox="0 0 16 16" class="bi bi-arrow-right">
-              <path fill-rule="evenodd"
-                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
-            </svg>
-          </div>
-        </div>
-      </div>
+<body>
 
-      <div class="col">
-        <div class="card">
-          <div class="card-body d-flex justify-content-between align-items-center">
-            <p class="mb-0">
-              Vue.js
-            </p>
-            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
-                 viewBox="0 0 16 16" class="bi bi-arrow-right">
-              <path fill-rule="evenodd"
-                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
-            </svg>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="card">
-          <div class="card-body d-flex justify-content-between align-items-center">
-            <p class="mb-0">
-              Quasar
-            </p>
-            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
-                 viewBox="0 0 16 16" class="bi bi-arrow-right">
-              <path fill-rule="evenodd"
-                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
-            </svg>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="card">
-          <div class="card-body d-flex justify-content-between align-items-center">
-            <p class="mb-0">
-              Bootstrap
-            </p>
-            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
-                 viewBox="0 0 16 16" class="bi bi-arrow-right">
-              <path fill-rule="evenodd"
-                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
-            </svg>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="card">
-          <div class="card-body d-flex justify-content-between align-items-center">
-            <p class="mb-0">
-              Wireframes
-            </p>
-            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
-                 viewBox="0 0 16 16" class="bi bi-arrow-right">
-              <path fill-rule="evenodd"
-                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
-            </svg>
-          </div>
-        </div>
-      </div>
-
+  <!-- Page loading spinner -->
+  <div class="page-loading active">
+    <div class="page-loading-inner">
+      <div class="page-spinner"></div>
+      <span>Loading...</span>
     </div>
   </div>
 
-  <div class="container mt-4">
 
-    <h3>Backend</h3>
+  <!-- Page wrapper -->
+  <main class="page-wrapper">
 
-    <div class="row gx-3 gy-3 row-cols-1 row-cols-md-2 row-cols-lg-3">
+    <!-- Navbar. Remove 'fixed-top' class to make the navigation bar scrollable with the page -->
+    <!-- Navbar. Remove 'fixed-top' class to make the navigation bar scrollable with the page -->
+    <header class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
 
-      <div class="col">
-        <div class="card">
-          <div class="card-body d-flex justify-content-between align-items-center">
-            <p class="mb-0">
-              PHP
+        <!-- Navbar brand (Logo) -->
+        <a class="navbar-brand pe-sm-3" href="index.html">
+          <img src="assets/img/logo/Logo-Adérito-White.webp" width="150" alt="Adérito De Barros"
+            class="d-dark-mode-block d-none">
+          <img src="assets/img/logo/Logo-Adérito-black.webp" width="150" alt="Adérito De Barros"
+            class="d-dark-mode-none d-block">
+        </a>
+
+        <!-- Theme switcher -->
+        <div class="form-check form-switch mode-switch order-lg-2 me-3 me-lg-4 ms-auto" data-bs-toggle="mode">
+          <input class="form-check-input" type="checkbox" id="theme-mode">
+          <label class="form-check-label" for="theme-mode">
+            <i class="ai-sun fs-lg"></i>
+          </label>
+          <label class="form-check-label" for="theme-mode">
+            <i class="ai-moon fs-lg"></i>
+          </label>
+        </div>
+
+        <!-- Contact Button -->
+        <a class="btn btn-primary btn-sm fs-sm order-lg-3 d-none d-sm-inline-flex" href="#contacto">
+          <i class="ai-phone fs-xl me-2 ms-n1"></i>
+          CONTACTO
+        </a>
+
+        <!-- Mobile menu toggler (Hamburger) -->
+        <button class="navbar-toggler ms-sm-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar collapse (Main navigation) -->
+        <nav class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav navbar-nav-scroll me-auto" style="--ar-scroll-height: 520px;">
+            <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#servicos">Habilidades</a></li>
+            <li class="nav-item"><a class="nav-link" href="#trabalhos">Trabalhos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#acerca">Acerca</a></li>
+          </ul>
+          <div class="d-sm-none p-3 mt-n3">
+            <a class="btn btn-primary w-100 mb-1" href="#contacto">
+              <i class="ai-phone fs-xl me-2 ms-n1"></i>
+              CONTACTO
+            </a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+
+    <!-- Hero -->
+    <section class="overflow-hidden">
+      <div class="container pt-2 pt-sm-4 pb-sm-2 pb-md-4 py-xl-5 mt-5">
+        <div class="row align-items-center py-5 mt-md-2 my-lg-3 my-xl-4 my-xxl-5">
+          <div
+            class="col-lg-7 order-lg-2 d-flex justify-content-center justify-content-lg-end mb-4 mb-md-5 mb-lg-0 pb-3 pb-md-0">
+            <div class="parallax me-lg-n4 me-xl-n5" style="max-width: 667px;">
+              <div class="parallax-layer" data-depth="0.1">
+                <img src="around.createx.studio/assets/img/landing/business-consulting/hero/01.png" alt="Layer">
+              </div>
+              <div class="parallax-layer" data-depth="-0.2">
+                <img src="around.createx.studio/assets/img/landing/business-consulting/hero/02.png" alt="Layer">
+              </div>
+              <div class="parallax-layer" data-depth="0.25">
+                <img src="around.createx.studio/assets/img/landing/business-consulting/hero/03.png" alt="Layer">
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5 order-lg-1">
+            <h1 class="display-3 text-center text-lg-start pb-sm-2 pb-md-3">Soluções Eficientes para o seu Negócio</h1>
+            <p class="fs-lg text-center text-lg-start pb-xl-2 mx-auto mx-lg-0 mb-5" style="max-width: 420px;">
+              Transformo ideias em realidade digital com estratégias de desenvolvimento modernas e focadas em
+              resultados.
             </p>
-            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
-                 viewBox="0 0 16 16" class="bi bi-arrow-right">
-              <path fill-rule="evenodd"
-                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
-            </svg>
+            <div class="d-flex justify-content-center justify-content-lg-start">
+              <a class="btn btn-lg btn-primary" href="#contacto">Vamos Iniciar</a>
+              <a class="btn btn-lg btn-outline-dark ms-3" href="#trabalhos">Ver Projetos</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Tecnologias (Partners) -->
+    <section class="pb-5 pt-2 pt-sm-3 pt-md-4 pt-lg-5 my-xl-3 my-xxl-5">
+      <!-- Row 1: LTR Slider -->
+      <div class="swiper pb-4" data-swiper-options='{
+        "spaceBetween": 24,
+        "loop": true,
+        "grabCursor": false,
+        "centeredSlides": true,
+        "autoplay": {
+          "delay": 0,
+          "disableOnInteraction": false
+        },
+        "freeMode": true,
+        "speed": 10000,
+        "freeModeMomentum": false,
+        "breakpoints": {
+          "0": { "slidesPerView": 2 },
+          "400": { "slidesPerView": 3 },
+          "600": { "slidesPerView": 4 },
+          "800": { "slidesPerView": 5 },
+          "1200": { "slidesPerView": 6 },
+          "1400": { "slidesPerView": 7 },
+          "1600": { "slidesPerView": 8 }
+        }
+      }'>
+        <div class="swiper-wrapper" style="transition-timing-function: linear !important;">
+          <!-- HTML5 -->
+          <div class="swiper-slide">
+            <div class="bg-gray rounded-4 p-4 text-center">
+              <img class="d-block mx-auto" src="around.createx.studio/assets/img/landing/intro/features/html5.png"
+                width="120" alt="HTML5">
+            </div>
+          </div>
+          <!-- CSS3 -->
+          <div class="swiper-slide">
+            <div class="bg-gray rounded-4 p-4 text-center">
+              <img class="d-block mx-auto" src="around.createx.studio/assets/img/landing/web-studio/skills/css3.svg"
+                width="120" alt="CSS3">
+            </div>
+          </div>
+          <!-- JavaScript -->
+          <div class="swiper-slide">
+            <div class="bg-gray rounded-4 p-4 text-center">
+              <img class="d-block mx-auto" src="around.createx.studio/assets/img/landing/intro/features/js.png"
+                width="120" alt="JavaScript">
+            </div>
+          </div>
+          <!-- Vue.js -->
+          <div class="swiper-slide">
+            <div class="bg-gray rounded-4 p-4 text-center">
+              <img class="d-block d-dark-mode-none mx-auto" src="around.createx.studio/assets/img/brands/vuejs-dark.svg"
+                width="120" alt="Vue.js">
+              <img class="d-none d-dark-mode-block mx-auto"
+                src="around.createx.studio/assets/img/brands/vuejs-light.svg" width="120" alt="Vue.js">
+            </div>
+          </div>
+          <!-- Laravel -->
+          <div class="swiper-slide">
+            <div class="bg-gray rounded-4 p-4 text-center">
+              <img class="d-block d-dark-mode-none mx-auto"
+                src="around.createx.studio/assets/img/landing/conference/sponsors/laravel-dark.svg" width="120"
+                alt="Laravel">
+              <img class="d-none d-dark-mode-block mx-auto"
+                src="around.createx.studio/assets/img/landing/conference/sponsors/laravel-light.svg" width="120"
+                alt="Laravel">
+            </div>
+          </div>
+          <!-- PHP -->
+          <div class="swiper-slide">
+            <div class="bg-gray rounded-4 p-4 text-center">
+              <img class="d-block mx-auto"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" width="120"
+                alt="PHP">
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="col">
-        <div class="card">
-          <div class="card-body d-flex justify-content-between align-items-center">
-            <p class="mb-0">
-              JavaScript
-            </p>
-            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
-                 viewBox="0 0 16 16" class="bi bi-arrow-right">
-              <path fill-rule="evenodd"
-                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
-            </svg>
+      <!-- Row 2: RTL Slider -->
+      <div class="swiper" dir="rtl" data-swiper-options='{
+        "spaceBetween": 24,
+        "loop": true,
+        "grabCursor": false,
+        "centeredSlides": true,
+        "autoplay": {
+          "delay": 0,
+          "disableOnInteraction": false
+        },
+        "freeMode": true,
+        "speed": 8500,
+        "freeModeMomentum": false,
+        "breakpoints": {
+          "0": { "slidesPerView": 2 },
+          "400": { "slidesPerView": 3 },
+          "600": { "slidesPerView": 4 },
+          "800": { "slidesPerView": 5 },
+          "1200": { "slidesPerView": 6 },
+          "1400": { "slidesPerView": 7 },
+          "1600": { "slidesPerView": 8 }
+        }
+      }'>
+        <div class="swiper-wrapper" style="transition-timing-function: linear !important;">
+          <!-- MySQL -->
+          <div class="swiper-slide">
+            <div class="bg-gray rounded-4 p-4 text-center">
+              <img class="d-block mx-auto"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" width="120"
+                alt="MySQL">
+            </div>
+          </div>
+          <!-- Bootstrap -->
+          <div class="swiper-slide">
+            <div class="bg-gray rounded-4 p-4 text-center">
+              <img class="d-block d-dark-mode-none mx-auto"
+                src="around.createx.studio/assets/img/landing/conference/sponsors/bootstrap-dark.svg" width="120"
+                alt="Bootstrap">
+              <img class="d-none d-dark-mode-block mx-auto"
+                src="around.createx.studio/assets/img/landing/conference/sponsors/bootstrap-light.svg" width="120"
+                alt="Bootstrap">
+            </div>
+          </div>
+          <!-- Figma -->
+          <div class="swiper-slide">
+            <div class="bg-gray rounded-4 p-4 text-center">
+              <img class="d-block mx-auto" src="around.createx.studio/assets/img/landing/web-studio/skills/figma.svg"
+                width="120" alt="Figma">
+            </div>
+          </div>
+          <!-- Git -->
+          <div class="swiper-slide">
+            <div class="bg-gray rounded-4 p-4 text-center">
+              <img class="d-block mx-auto"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" width="120"
+                alt="Git">
+            </div>
+          </div>
+          <!-- GitHub -->
+          <div class="swiper-slide">
+            <div class="bg-gray rounded-4 p-4 text-center">
+              <img class="d-block d-dark-mode-none mx-auto"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" width="120"
+                alt="GitHub">
+              <img class="d-none d-dark-mode-block mx-auto invert-1" style="filter: invert(1);"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" width="120"
+                alt="GitHub">
+            </div>
+          </div>
+          <!-- PayPal -->
+          <div class="swiper-slide">
+            <div class="bg-gray rounded-4 p-4 text-center">
+              <img class="d-block mx-auto"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/paypal/paypal-original.svg" width="120"
+                alt="PayPal">
+            </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="col">
-        <div class="card">
-          <div class="card-body d-flex justify-content-between align-items-center">
-            <p class="mb-0">
-              Laravel
-            </p>
-            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
-                 viewBox="0 0 16 16" class="bi bi-arrow-right">
-              <path fill-rule="evenodd"
-                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
-            </svg>
+    <!-- Tecnologias (Partners) 2 -->
+    <section class="pb-5 pt-2 pt-sm-3 pt-md-4 pt-lg-5 my-xl-3 my-xxl-5">
+
+      <div class="swiper pb-4 swiper-initialized swiper-horizontal swiper-free-mode swiper-backface-hidden"
+        data-swiper-options="{
+          &quot;spaceBetween&quot;: 24,
+          &quot;loop&quot;: true,
+          &quot;grabCursor&quot;: false,
+          &quot;centeredSlides&quot;: true,
+          &quot;autoplay&quot;: {
+            &quot;delay&quot;: 0,
+            &quot;disableOnInteraction&quot;: false
+          },
+          &quot;freeMode&quot;: true,
+          &quot;speed&quot;: 10000,
+          &quot;freeModeMomentum&quot;: false,
+          &quot;breakpoints&quot;: {
+            &quot;0&quot;: { &quot;slidesPerView&quot;: 2 },
+            &quot;400&quot;: { &quot;slidesPerView&quot;: 3 },
+            &quot;600&quot;: { &quot;slidesPerView&quot;: 4 },
+            &quot;800&quot;: { &quot;slidesPerView&quot;: 5 },
+            &quot;1200&quot;: { &quot;slidesPerView&quot;: 6 },
+            &quot;1400&quot;: { &quot;slidesPerView&quot;: 7 },
+            &quot;1600&quot;: { &quot;slidesPerView&quot;: 8 }
+          }
+        }">
+        <div class="swiper-wrapper"
+          style="transition-timing-function: linear !important; transition-duration: 10000ms; transform: translate3d(-424.286px, 0px, 0px);"
+          id="swiper-wrapper-b31d680f10857bf31" aria-live="off">
+
+
+
+
+
+
+
+
+
+          <div class="swiper-slide" role="group" aria-label="6 / 9" data-swiper-slide-index="5"
+            style="width: 188.143px; margin-right: 24px;">
+            <div class="bg-gray rounded-4">
+              <img class="d-block d-dark-mode-none mx-auto"
+                src="assets/img/landing/business-consulting/clients/06-dark.svg" width="196" alt="Logo">
+              <img class="d-none d-dark-mode-block mx-auto"
+                src="assets/img/landing/business-consulting/clients/06-light.svg" width="196" alt="Logo">
+            </div>
+          </div>
+          <div class="swiper-slide" role="group" aria-label="7 / 9" data-swiper-slide-index="6"
+            style="width: 188.143px; margin-right: 24px;">
+            <div class="bg-gray rounded-4">
+              <img class="d-block d-dark-mode-none mx-auto"
+                src="assets/img/landing/business-consulting/clients/03-dark.svg" width="196" alt="Logo">
+              <img class="d-none d-dark-mode-block mx-auto"
+                src="assets/img/landing/business-consulting/clients/03-light.svg" width="196" alt="Logo">
+            </div>
+          </div>
+          <div class="swiper-slide" role="group" aria-label="8 / 9" data-swiper-slide-index="7"
+            style="width: 188.143px; margin-right: 24px;">
+            <div class="bg-gray rounded-4">
+              <img class="d-block d-dark-mode-none mx-auto"
+                src="assets/img/landing/business-consulting/clients/05-dark.svg" width="196" alt="Logo">
+              <img class="d-none d-dark-mode-block mx-auto"
+                src="assets/img/landing/business-consulting/clients/05-light.svg" width="196" alt="Logo">
+            </div>
+          </div>
+          <div class="swiper-slide" role="group" aria-label="9 / 9" data-swiper-slide-index="8"
+            style="width: 188.143px; margin-right: 24px;">
+            <div class="bg-gray rounded-4">
+              <img class="d-block d-dark-mode-none mx-auto"
+                src="assets/img/landing/business-consulting/clients/02-dark.svg" width="196" alt="Logo">
+              <img class="d-none d-dark-mode-block mx-auto"
+                src="assets/img/landing/business-consulting/clients/02-light.svg" width="196" alt="Logo">
+            </div>
+          </div>
+          <div class="swiper-slide swiper-slide-prev" role="group" aria-label="1 / 9" data-swiper-slide-index="0"
+            style="width: 188.143px; margin-right: 24px;">
+            <div class="bg-gray rounded-4">
+              <img class="d-block d-dark-mode-none mx-auto"
+                src="assets/img/landing/business-consulting/clients/01-dark.svg" width="196" alt="Logo">
+              <img class="d-none d-dark-mode-block mx-auto"
+                src="assets/img/landing/business-consulting/clients/01-light.svg" width="196" alt="Logo">
+            </div>
+          </div>
+          <div class="swiper-slide swiper-slide-active" role="group" aria-label="2 / 9" data-swiper-slide-index="1"
+            style="width: 188.143px; margin-right: 24px;">
+            <div class="bg-gray rounded-4">
+              <img class="d-block d-dark-mode-none mx-auto"
+                src="assets/img/landing/business-consulting/clients/02-dark.svg" width="196" alt="Logo">
+              <img class="d-none d-dark-mode-block mx-auto"
+                src="assets/img/landing/business-consulting/clients/02-light.svg" width="196" alt="Logo">
+            </div>
+          </div>
+          <div class="swiper-slide swiper-slide-next" role="group" aria-label="3 / 9" data-swiper-slide-index="2"
+            style="width: 188.143px; margin-right: 24px;">
+            <div class="bg-gray rounded-4">
+              <img class="d-block d-dark-mode-none mx-auto"
+                src="assets/img/landing/business-consulting/clients/03-dark.svg" width="196" alt="Logo">
+              <img class="d-none d-dark-mode-block mx-auto"
+                src="assets/img/landing/business-consulting/clients/03-light.svg" width="196" alt="Logo">
+            </div>
+          </div>
+          <div class="swiper-slide" role="group" aria-label="4 / 9" data-swiper-slide-index="3"
+            style="width: 188.143px; margin-right: 24px;">
+            <div class="bg-gray rounded-4">
+              <img class="d-block d-dark-mode-none mx-auto"
+                src="assets/img/landing/business-consulting/clients/04-dark.svg" width="196" alt="Logo">
+              <img class="d-none d-dark-mode-block mx-auto"
+                src="assets/img/landing/business-consulting/clients/04-light.svg" width="196" alt="Logo">
+            </div>
+          </div>
+          <div class="swiper-slide" role="group" aria-label="5 / 9" data-swiper-slide-index="4"
+            style="width: 188.143px; margin-right: 24px;">
+            <div class="bg-gray rounded-4">
+              <img class="d-block d-dark-mode-none mx-auto"
+                src="assets/img/landing/business-consulting/clients/05-dark.svg" width="196" alt="Logo">
+              <img class="d-none d-dark-mode-block mx-auto"
+                src="assets/img/landing/business-consulting/clients/05-light.svg" width="196" alt="Logo">
+            </div>
+          </div>
+        </div>
+        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+      </div>
+      <div class="swiper swiper-initialized swiper-horizontal swiper-free-mode swiper-rtl swiper-backface-hidden"
+        dir="rtl" data-swiper-options="{
+          &quot;spaceBetween&quot;: 24,
+          &quot;loop&quot;: true,
+          &quot;grabCursor&quot;: false,
+          &quot;centeredSlides&quot;: true,
+          &quot;autoplay&quot;: {
+            &quot;delay&quot;: 0,
+            &quot;disableOnInteraction&quot;: false
+          },
+          &quot;freeMode&quot;: true,
+          &quot;speed&quot;: 8500,
+          &quot;freeModeMomentum&quot;: false,
+          &quot;breakpoints&quot;: {
+            &quot;0&quot;: { &quot;slidesPerView&quot;: 2 },
+            &quot;400&quot;: { &quot;slidesPerView&quot;: 3 },
+            &quot;600&quot;: { &quot;slidesPerView&quot;: 4 },
+            &quot;800&quot;: { &quot;slidesPerView&quot;: 5 },
+            &quot;1200&quot;: { &quot;slidesPerView&quot;: 6 },
+            &quot;1400&quot;: { &quot;slidesPerView&quot;: 7 },
+            &quot;1600&quot;: { &quot;slidesPerView&quot;: 8 }
+          }
+        }">
+        <div class="swiper-wrapper"
+          style="transition-timing-function: linear !important; transition-duration: 8500ms; transform: translate3d(424.286px, 0px, 0px);"
+          id="swiper-wrapper-de9db56f3faa51043" aria-live="off">
+
+
+
+
+
+
+
+
+
+          <div class="swiper-slide" role="group" aria-label="3 / 9" data-swiper-slide-index="2"
+            style="width: 188.143px; margin-left: 24px;">
+            <div class="bg-gray rounded-4">
+              <img class="d-block d-dark-mode-none mx-auto"
+                src="assets/img/landing/business-consulting/clients/04-dark.svg" width="196" alt="Logo">
+              <img class="d-none d-dark-mode-block mx-auto"
+                src="assets/img/landing/business-consulting/clients/04-light.svg" width="196" alt="Logo">
+            </div>
+          </div>
+          <div class="swiper-slide" role="group" aria-label="4 / 9" data-swiper-slide-index="3"
+            style="width: 188.143px; margin-left: 24px;">
+            <div class="bg-gray rounded-4">
+              <img class="d-block d-dark-mode-none mx-auto"
+                src="assets/img/landing/business-consulting/clients/02-dark.svg" width="196" alt="Logo">
+              <img class="d-none d-dark-mode-block mx-auto"
+                src="assets/img/landing/business-consulting/clients/02-light.svg" width="196" alt="Logo">
+            </div>
+          </div>
+          <div class="swiper-slide" role="group" aria-label="5 / 9" data-swiper-slide-index="4"
+            style="width: 188.143px; margin-left: 24px;">
+            <div class="bg-gray rounded-4">
+              <img class="d-block d-dark-mode-none mx-auto"
+                src="assets/img/landing/business-consulting/clients/03-dark.svg" width="196" alt="Logo">
+              <img class="d-none d-dark-mode-block mx-auto"
+                src="assets/img/landing/business-consulting/clients/03-light.svg" width="196" alt="Logo">
+            </div>
+          </div>
+          <div class="swiper-slide" role="group" aria-label="6 / 9" data-swiper-slide-index="5"
+            style="width: 188.143px; margin-left: 24px;">
+            <div class="bg-gray rounded-4">
+              <img class="d-block d-dark-mode-none mx-auto"
+                src="assets/img/landing/business-consulting/clients/01-dark.svg" width="196" alt="Logo">
+              <img class="d-none d-dark-mode-block mx-auto"
+                src="assets/img/landing/business-consulting/clients/01-light.svg" width="196" alt="Logo">
+            </div>
+          </div>
+          <div class="swiper-slide swiper-slide-prev" role="group" aria-label="7 / 9" data-swiper-slide-index="6"
+            style="width: 188.143px; margin-left: 24px;">
+            <div class="bg-gray rounded-4">
+              <img class="d-block d-dark-mode-none mx-auto"
+                src="assets/img/landing/business-consulting/clients/04-dark.svg" width="196" alt="Logo">
+              <img class="d-none d-dark-mode-block mx-auto"
+                src="assets/img/landing/business-consulting/clients/04-light.svg" width="196" alt="Logo">
+            </div>
+          </div>
+          <div class="swiper-slide swiper-slide-active" role="group" aria-label="8 / 9" data-swiper-slide-index="7"
+            style="width: 188.143px; margin-left: 24px;">
+            <div class="bg-gray rounded-4">
+              <img class="d-block d-dark-mode-none mx-auto"
+                src="assets/img/landing/business-consulting/clients/02-dark.svg" width="196" alt="Logo">
+              <img class="d-none d-dark-mode-block mx-auto"
+                src="assets/img/landing/business-consulting/clients/02-light.svg" width="196" alt="Logo">
+            </div>
+          </div>
+          <div class="swiper-slide swiper-slide-next" role="group" aria-label="9 / 9" data-swiper-slide-index="8"
+            style="width: 188.143px; margin-left: 24px;">
+            <div class="bg-gray rounded-4">
+              <img class="d-block d-dark-mode-none mx-auto"
+                src="assets/img/landing/business-consulting/clients/03-dark.svg" width="196" alt="Logo">
+              <img class="d-none d-dark-mode-block mx-auto"
+                src="assets/img/landing/business-consulting/clients/03-light.svg" width="196" alt="Logo">
+            </div>
+          </div>
+          <div class="swiper-slide" role="group" aria-label="1 / 9" data-swiper-slide-index="0"
+            style="width: 188.143px; margin-left: 24px;">
+            <div class="bg-gray rounded-4">
+              <img class="d-block d-dark-mode-none mx-auto"
+                src="assets/img/landing/business-consulting/clients/06-dark.svg" width="196" alt="Logo">
+              <img class="d-none d-dark-mode-block mx-auto"
+                src="assets/img/landing/business-consulting/clients/06-light.svg" width="196" alt="Logo">
+            </div>
+          </div>
+          <div class="swiper-slide" role="group" aria-label="2 / 9" data-swiper-slide-index="1"
+            style="width: 188.143px; margin-left: 24px;">
+            <div class="bg-gray rounded-4">
+              <img class="d-block d-dark-mode-none mx-auto"
+                src="assets/img/landing/business-consulting/clients/05-dark.svg" width="196" alt="Logo">
+              <img class="d-none d-dark-mode-block mx-auto"
+                src="assets/img/landing/business-consulting/clients/05-light.svg" width="196" alt="Logo">
+            </div>
+          </div>
+        </div>
+        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+      </div>
+    </section>
+
+    <!-- Services (Habilidades) -->
+    <section class="container py-5 my-md-2 my-lg-3 my-xl-4 my-xxl-5" id="servicos">
+      <div class="row align-items-center py-1 py-sm-3 py-md-4 my-lg-2">
+        <div class="col-lg-4 offset-xl-1" data-aos="fade-right" data-aos-duration="600" data-aos-offset="200">
+          <h2 class="h1 text-center text-lg-start pb-3 pb-lg-1">Minhas Habilidades</h2>
+
+          <!-- Show on screens > 992px -->
+          <ul class="list-unstyled d-none d-lg-block pb-3 mb-3 mb-lg-4">
+            <li class="d-flex pt-2">
+              <i class="ai-check-alt fs-4 text-primary mt-n1 me-2"></i>
+              Desenvolvimento Full-Stack Completo
+            </li>
+            <li class="d-flex pt-2">
+              <i class="ai-check-alt fs-4 text-primary mt-n1 me-2"></i>
+              Integrações de Pagamento Seguras
+            </li>
+            <li class="d-flex pt-2">
+              <i class="ai-check-alt fs-4 text-primary mt-n1 me-2"></i>
+              Código Limpo, Moderno e Escalável
+            </li>
+          </ul>
+          <a class="btn btn-primary d-none d-lg-inline-flex" href="#contacto">Fale Comigo</a>
+        </div>
+
+        <div class="col-lg-8 col-xl-7 col-xxl-6">
+          <div class="row row-cols-1 row-cols-sm-2">
+            <div class="col">
+              <!-- Frontend -->
+              <div class="card border-0 bg-primary bg-opacity-10" data-aos="fade-up" data-aos-duration="600"
+                data-aos-delay="100">
+                <div class="card-body">
+                  <i class="ai-monitor fs-1 text-primary d-block mb-3"></i>
+                  <h3 class="h4">Frontend</h3>
+                  <p class="fs-sm">HTML, CSS, Vue.js, Quasar Framework, Bootstrap, Wireframes.</p>
+                </div>
+              </div>
+              <!-- Backend -->
+              <div class="card border-0 bg-info bg-opacity-10 mt-4" data-aos="fade-up" data-aos-duration="600"
+                data-aos-delay="200">
+                <div class="card-body">
+                  <i class="ai-server fs-1 text-info d-block mb-3"></i>
+                  <h3 class="h4">Backend</h3>
+                  <p class="fs-sm">PHP, JavaScript, Laravel, MySQL, API RESTful.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col pt-lg-3">
+              <!-- Integrações -->
+              <div class="card border-0 bg-warning bg-opacity-10 mt-4 mt-sm-0 mt-lg-4" data-aos="fade-up"
+                data-aos-duration="600" data-aos-delay="300">
+                <div class="card-body">
+                  <i class="ai-card fs-1 text-warning d-block mb-3"></i>
+                  <h3 class="h4">Integrações</h3>
+                  <p class="fs-sm">Integrações com M-Pesa, E-Mola, PayPal e Stripe.</p>
+                </div>
+              </div>
+              <!-- DevOps -->
+              <div class="card border-0 bg-danger bg-opacity-10 mt-4" data-aos="fade-up" data-aos-duration="600"
+                data-aos-delay="400">
+                <div class="card-body">
+                  <i class="ai-rocket fs-2 text-danger d-block mb-3"></i>
+                  <h3 class="h4">DevOps</h3>
+                  <p class="fs-sm">Git, GitHub, CI/CD, Terminal e processos de Deploy.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Show button on screens < 992px -->
+          <div class="d-lg-none text-center pt-3 mt-3 mt-sm-4">
+            <a class="btn btn-primary" href="#contacto">Fale Comigo</a>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="col">
-        <div class="card">
-          <div class="card-body d-flex justify-content-between align-items-center">
-            <p class="mb-0">
-              MySQL
-            </p>
-            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
-                 viewBox="0 0 16 16" class="bi bi-arrow-right">
-              <path fill-rule="evenodd"
-                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
-            </svg>
+
+    <!-- CEO quote + Process steps -->
+    <section class="overflow-hidden" id="acerca">
+      <div class="container pb-5 pt-3 pt-md-4 pt-lg-5 my-xl-3 my-xxl-5">
+        <div class="row pb-md-3 pb-lg-4 mb-2 mb-lg-3">
+
+          <!-- CEO quote -->
+          <div class="col-md-5 d-flex flex-column align-items-center mb-4 mb-md-0">
+            <div class="position-relative" style="max-width: 416px;">
+              <!-- Usando logo como placeholder até ter foto profissional recortada -->
+              <img class="d-block position-relative z-2" src="assets/img/IMG_0143.webp" alt="Adérito De Barros">
+              <div class="bg-primary position-absolute start-0 bottom-0 w-100"
+                style="height: 85.4%; border-radius: 2.25rem 8rem 2.25rem 2.25rem;"></div>
+            </div>
+            <div class="text-center text-md-start pt-3 mt-3">
+              <h2 class="mb-2">Adérito De Barros</h2>
+              <p class="fs-xl text-body-secondary mb-2">Programador Full-Stack</p>
+              <div class="position-relative pt-4" style="max-width: 500px;">
+                <div class="position-absolute top-0 start-0 w-100 text-center text-md-start ms-md-1">
+                  <svg class="text-border" width="155" height="111" viewbox="0 0 155 111" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M125.969 38.7937C129.372 30.2345 134.734 21.7781 141.902 13.6311C144.17 11.053 144.48 7.34066 142.623 4.45316C141.18 2.18441 138.808 0.94696 136.23 0.94696C135.508 0.94696 134.786 0.99826 134.064 1.25633C118.905 5.69065 83.4811 21.4171 82.5014 71.8454C82.1407 91.2842 96.3717 107.99 114.883 109.898C125.144 110.93 135.353 107.578 142.933 100.772C150.512 93.914 154.844 84.117 154.844 73.9077C154.844 56.8922 142.778 41.9905 125.969 38.7937Z">
+                    </path>
+                    <path
+                      d="M32.5904 109.898C42.7999 110.93 53.0092 107.578 60.5888 100.772C68.1686 93.914 72.5 84.117 72.5 73.9077C72.5 56.8922 60.4342 41.9905 43.6248 38.7937C47.0281 30.2345 52.3905 21.7781 59.5578 13.6312C61.8265 11.0531 62.1359 7.34071 60.2794 4.45321C58.8358 2.18446 56.4638 0.947006 53.8857 0.947006C53.1641 0.947006 52.4421 0.998306 51.7202 1.25638C36.5608 5.6907 1.13734 21.4172 0.157654 71.8454V72.5671C0.157654 91.6968 14.2341 107.99 32.5904 109.898Z">
+                    </path>
+                  </svg>
+                </div>
+                <p class="fs-xl position-relative z-2 mb-0">"Meu foco é <strong>criar ecossistemas digitais
+                    sustentáveis.</strong> Não apenas escrevo código, desenho soluções que escalam com o seu negócio e
+                  proporcionam a melhor experiência."</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Steps -->
+          <div class="col-md-7 col-lg-6 col-xxl-5 offset-lg-1 offset-xxl-2">
+            <div class="ps-md-4 ps-lg-0">
+              <div class="position-relative d-flex justify-content-end my-3 py-1" data-aos="fade-left"
+                data-aos-easing="ease-out-back">
+                <div
+                  class="btn btn-lg btn-icon btn-primary fs-xl fw-bold rounded-circle position-absolute top-50 start-0 translate-middle-y z-2 pe-none">
+                  01</div>
+                <div class="card bg-secondary border-0 ps-3" style="width: calc(100% - 1.75rem);">
+                  <div class="card-body ps-4">
+                    <h3 class="h5 card-title pb-2 mb-1">Levantamento</h3>
+                    <p class="card-text">Análise profunda dos requisitos e objetivos do projeto para definir a melhor
+                      arquitetura.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="position-relative d-flex justify-content-end my-3 py-1" data-aos="fade-left"
+                data-aos-easing="ease-out-back" data-aos-delay="250">
+                <div
+                  class="btn btn-lg btn-icon btn-primary fs-xl fw-bold rounded-circle position-absolute top-50 start-0 translate-middle-y z-2 pe-none">
+                  02</div>
+                <div class="card bg-secondary border-0 ps-3" style="width: calc(100% - 1.75rem);">
+                  <div class="card-body ps-4">
+                    <h3 class="h5 card-title pb-2 mb-1">Design & Prototipagem</h3>
+                    <p class="card-text">Criação de wireframes e layouts modernos (UI/UX) antes de escrever qualquer
+                      linha de código.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="position-relative d-flex justify-content-end my-3 py-1" data-aos="fade-left"
+                data-aos-easing="ease-out-back" data-aos-delay="500">
+                <div
+                  class="btn btn-lg btn-icon btn-primary fs-xl fw-bold rounded-circle position-absolute top-50 start-0 translate-middle-y z-2 pe-none">
+                  03</div>
+                <div class="card bg-secondary border-0 ps-3" style="width: calc(100% - 1.75rem);">
+                  <div class="card-body ps-4">
+                    <h3 class="h5 card-title pb-2 mb-1">Desenvolvimento</h3>
+                    <p class="card-text">Implementação robusta usando Laravel, Vue.js e boas práticas de segurança e
+                      performance.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="position-relative d-flex justify-content-end my-3 py-1" data-aos="fade-left"
+                data-aos-easing="ease-out-back" data-aos-delay="700">
+                <div
+                  class="btn btn-lg btn-icon btn-primary fs-xl fw-bold rounded-circle position-absolute top-50 start-0 translate-middle-y z-2 pe-none">
+                  04</div>
+                <div class="card bg-secondary border-0 ps-3" style="width: calc(100% - 1.75rem);">
+                  <div class="card-body ps-4">
+                    <h3 class="h5 card-title pb-2 mb-1">Entrega & Suporte</h3>
+                    <p class="card-text">Deploy em produção, treinamentos e suporte contínuo para garantir satisfação
+                      total.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="col">
-        <div class="card">
-          <div class="card-body d-flex justify-content-between align-items-center">
-            <p class="mb-0">
-              API RESTful
-            </p>
-            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
-                 viewBox="0 0 16 16" class="bi bi-arrow-right">
-              <path fill-rule="evenodd"
-                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
-            </svg>
-          </div>
-        </div>
-      </div>
 
+    <!-- Trabalhos Title -->
+    <div class="container text-center pt-5 mt-lg-3 mt-xl-4 mt-xxl-5 pb-3 mb-3 mb-lg-4" id="trabalhos">
+      <h2 class="h1 mb-2">Trabalhos Recentes</h2>
+      <p class="fs-lg text-body-secondary">Alguns dos projetos que tenho orgulho de ter desenvolvido.</p>
     </div>
-  </div>
 
-  <div class="container mt-4">
-
-    <h3>DevOps & Ferramentas</h3>
-
-    <div class="row gx-3 gy-3 row-cols-1 row-cols-md-2 row-cols-lg-3">
-
-      <div class="col">
-        <div class="card">
-          <div class="card-body d-flex justify-content-between align-items-center">
-            <p class="mb-0">
-              Git
-            </p>
-            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
-                 viewBox="0 0 16 16" class="bi bi-arrow-right">
-              <path fill-rule="evenodd"
-                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
-            </svg>
+    <!-- Project 1: Pintando Sonhos -->
+    <section class="overflow-hidden pb-5">
+      <div class="container pb-sm-3 mb-md-2 mb-lg-3">
+        <div class="row g-4">
+          <div class="col-md-7" data-aos="fade-right" data-aos-duration="600" data-aos-offset="280"
+            data-disable-parallax-down="md">
+            <img class="object-fit-cover w-100 h-100 rounded-3" src="assets/img/trabalhos/Pintando-Sonhos.webp"
+              alt="Pintando Sonhos">
+          </div>
+          <div class="col-md-5" data-aos="fade-left" data-aos-duration="600" data-aos-offset="280"
+            data-disable-parallax-down="md">
+            <div class="d-flex flex-column h-100 bg-secondary rounded-3 py-5 px-4 px-lg-5">
+              <span class="badge bg-primary bg-opacity-10 text-primary mb-3 align-self-start">Branding</span>
+              <h2 class="h3 mb-3">Pintando Sonhos</h2>
+              <p class="mb-4">Desenvolvimento de identidade visual completa, transmitindo criatividade e
+                profissionalismo. O projeto incluiu logo, paleta de cores e aplicações em mídias sociais.</p>
+              <ul class="list-unstyled mb-4">
+                <li class="d-flex pb-2 mb-1">
+                  <span class="bg-primary mt-2 me-2" style="width: 10px; height: 10px; border-radius: 2px;"></span>
+                  Logotipo Exclusivo
+                </li>
+                <li class="d-flex pb-2 mb-1">
+                  <span class="bg-primary mt-2 me-2" style="width: 10px; height: 10px; border-radius: 2px;"></span>
+                  Manual da Marca
+                </li>
+                <li class="d-flex pb-2 mb-1">
+                  <span class="bg-primary mt-2 me-2" style="width: 10px; height: 10px; border-radius: 2px;"></span>
+                  Identidade Visual
+                </li>
+              </ul>
+              <div class="mt-auto">
+                <a class="btn btn-outline-primary" href="#">Ver Detalhes</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="col">
-        <div class="card">
-          <div class="card-body d-flex justify-content-between align-items-center">
-            <p class="mb-0">
-              GitHub
-            </p>
-            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
-                 viewBox="0 0 16 16" class="bi bi-arrow-right">
-              <path fill-rule="evenodd"
-                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
-            </svg>
+    <!-- Project 2: NISHALVEN -->
+    <section class="overflow-hidden pb-5">
+      <div class="container pb-sm-3 mb-md-2 mb-lg-3">
+        <div class="row g-4">
+          <div class="col-md-7 order-md-2" data-aos="fade-left" data-aos-duration="600" data-aos-offset="280"
+            data-disable-parallax-down="md">
+            <img class="object-fit-cover w-100 h-100 rounded-3"
+              src="assets/img/trabalhos/Nishalven%2003_Prancheta%201.webp" alt="Nishalven">
+          </div>
+          <div class="col-md-5 order-md-1" data-aos="fade-right" data-aos-duration="600" data-aos-offset="280"
+            data-disable-parallax-down="md">
+            <div class="d-flex flex-column h-100 bg-secondary rounded-3 py-5 px-4 px-lg-5">
+              <span class="badge bg-warning bg-opacity-10 text-warning mb-3 align-self-start">Branding & Banner</span>
+              <h2 class="h3 mb-3">Nishalven</h2>
+              <p class="mb-4">Criação de banners publicitários e materiais promocionais de alto impacto visual para
+                fortalecer a presença da marca no mercado.</p>
+              <ul class="list-unstyled mb-4">
+                <li class="d-flex pb-2 mb-1">
+                  <span class="bg-primary mt-2 me-2" style="width: 10px; height: 10px; border-radius: 2px;"></span>
+                  Banner Publicitário
+                </li>
+                <li class="d-flex pb-2 mb-1">
+                  <span class="bg-primary mt-2 me-2" style="width: 10px; height: 10px; border-radius: 2px;"></span>
+                  Marketing Visual
+                </li>
+              </ul>
+              <div class="mt-auto">
+                <a class="btn btn-outline-primary" href="#">Ver Detalhes</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+    </section>
 
-    </div>
-  </div>
-
-  <div class="container mt-4">
-
-    <h3>Integrações</h3>
-
-    <div class="row gx-3 gy-3 row-cols-1 row-cols-md-2 row-cols-lg-3">
-
-      <div class="col">
-        <div class="card">
-          <div class="card-body d-flex justify-content-between align-items-center">
-            <p class="mb-0">
-              M-Pesa
-            </p>
-            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
-                 viewBox="0 0 16 16" class="bi bi-arrow-right">
-              <path fill-rule="evenodd"
-                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
-            </svg>
+    <!-- Project 3: Curso CIS -->
+    <section class="overflow-hidden pb-5">
+      <div class="container pb-sm-3 mb-md-2 mb-lg-3">
+        <div class="row g-4">
+          <div class="col-md-7" data-aos="fade-right" data-aos-duration="600" data-aos-offset="280"
+            data-disable-parallax-down="md">
+            <img class="object-fit-cover w-100 h-100 rounded-3"
+              src="assets/img/trabalhos/Curso%20Panfleto%20ÔÇô%201.webp" alt="Curso CIS Salgados">
+          </div>
+          <div class="col-md-5" data-aos="fade-left" data-aos-duration="600" data-aos-offset="280"
+            data-disable-parallax-down="md">
+            <div class="d-flex flex-column h-100 bg-secondary rounded-3 py-5 px-4 px-lg-5">
+              <span class="badge bg-danger bg-opacity-10 text-danger mb-3 align-self-start">Design Gráfico</span>
+              <h2 class="h3 mb-3">Curso CIS Salgados</h2>
+              <p class="mb-4">Material de divulgação para curso profissionalizante. Foco na clareza da informação e
+                apelo visual para atrair novos alunos.</p>
+              <ul class="list-unstyled mb-4">
+                <li class="d-flex pb-2 mb-1">
+                  <span class="bg-primary mt-2 me-2" style="width: 10px; height: 10px; border-radius: 2px;"></span>
+                  Flyer Promocional
+                </li>
+                <li class="d-flex pb-2 mb-1">
+                  <span class="bg-primary mt-2 me-2" style="width: 10px; height: 10px; border-radius: 2px;"></span>
+                  Design para Redes Sociais
+                </li>
+              </ul>
+              <div class="mt-auto">
+                <a class="btn btn-outline-primary" href="#">Ver Detalhes</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="col">
-        <div class="card">
-          <div class="card-body d-flex justify-content-between align-items-center">
-            <p class="mb-0">
-              E-Mola
-            </p>
-            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
-                 viewBox="0 0 16 16" class="bi bi-arrow-right">
-              <path fill-rule="evenodd"
-                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
-            </svg>
+    <!-- Project 4: Cardápio Digital -->
+    <section class="overflow-hidden pb-5">
+      <div class="container pb-sm-3 mb-md-2 mb-lg-3">
+        <div class="row g-4">
+          <div class="col-md-7 order-md-2" data-aos="fade-left" data-aos-duration="600" data-aos-offset="280"
+            data-disable-parallax-down="md">
+            <img class="object-fit-cover w-100 h-100 rounded-3" src="assets/img/trabalhos/Web%201920%20–%201.webp"
+              alt="Cardápio Digital">
+          </div>
+          <div class="col-md-5 order-md-1" data-aos="fade-right" data-aos-duration="600" data-aos-offset="280"
+            data-disable-parallax-down="md">
+            <div class="d-flex flex-column h-100 bg-secondary rounded-3 py-5 px-4 px-lg-5">
+              <span class="badge bg-info bg-opacity-10 text-info mb-3 align-self-start">Web Design</span>
+              <h2 class="h3 mb-3">Cardápio Digital</h2>
+              <p class="mb-4">Interface moderna e responsiva para cardápio digital, otimizando a experiência do cliente
+                e facilitando pedidos.</p>
+              <ul class="list-unstyled mb-4">
+                <li class="d-flex pb-2 mb-1">
+                  <span class="bg-primary mt-2 me-2" style="width: 10px; height: 10px; border-radius: 2px;"></span>
+                  UI/UX Design
+                </li>
+                <li class="d-flex pb-2 mb-1">
+                  <span class="bg-primary mt-2 me-2" style="width: 10px; height: 10px; border-radius: 2px;"></span>
+                  Responsividade
+                </li>
+              </ul>
+              <div class="mt-auto">
+                <a class="btn btn-outline-primary" href="#">Ver Detalhes</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="col">
-        <div class="card">
-          <div class="card-body d-flex justify-content-between align-items-center">
-            <p class="mb-0">
-              PayPal
-            </p>
-            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
-                 viewBox="0 0 16 16" class="bi bi-arrow-right">
-              <path fill-rule="evenodd"
-                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
-            </svg>
+
+
+
+
+  </main>
+
+
+  <!-- Footer -->
+  <footer class="footer bg-dark position-relative py-4 py-md-5" id="contacto">
+    <div class="d-none d-dark-mode-block position-absolute top-0 start-0 w-100 h-100"
+      style="background-color: rgba(255,255,255, .03);"></div>
+    <div class="container position-relative z-2 pt-4 pt-md-2 pt-xl-4 pt-xxl-5" data-bs-theme="dark">
+      <div class="row py-md-3 mb-4 mb-md-5">
+        <div class="col-md-7 col-lg-6 col-xxl-5 mb-sm-4 mb-md-0">
+          <h2 class="display-4 mb-4 mb-md-5">Vamos transformar a sua ideia em realidade?</h2>
+          <div class="d-sm-flex align-items-center">
+            <a class="btn btn-lg btn-primary rounded-0 me-sm-3 me-lg-4" href="https://wa.me/+258841357516"
+              target="_blank">Contactar Agora</a>
+            <p class="text-body fs-sm py-3 py-sm-0 ps-sm-2 mb-0">Disponível para freelancers e colaborações.</p>
+          </div>
+        </div>
+        <div class="col-md-5 offset-lg-1 offset-xxl-2 d-flex flex-column">
+          <div class="nav mx-n2 mx-lg-n4 mb-2 mb-sm-3">
+            <a class="nav-link text-primary px-2 px-lg-4"
+              href="mailto:aderitodebarros@gmail.com">aderitodebarros@gmail.com</a>
+          </div>
+          <div class="nav flex-column mb-3 mb-sm-4">
+            <a class="nav-link py-1 px-0" href="tel:+258841357516">+258 84 135 7516</a>
+          </div>
+          <div class="nav mx-n2 mt-auto">
+            <a class="nav-link py-1 px-2 me-2" href="https://www.facebook.com/aderitolaquete.delito/"
+              target="_blank">Facebook</a>
+            <a class="nav-link py-1 px-2 me-2" href="https://www.linkedin.com/in/ad%C3%A9rito-de-barros-798bb2229/"
+              target="_blank">LinkedIn</a>
+            <a class="nav-link py-1 px-2 me-2" href="https://wa.me/+258841357516" target="_blank">Whatsapp</a>
           </div>
         </div>
       </div>
-
-    </div>
-  </div>
-
-  <div class="d-flex justify-content-center align-items-center barra"><span></span></div>
-</div>
-<div class="container py-4 trabalhos" id="trabalhos">
-  <div class="section-info"><span></span>
-    <h1 class="d-flex justify-content-between align-items-center">Trabalhos.</h1><small class="text-uppercase">coisas
-      que temos feito</small></div>
-  <div class="row gx-5 gy-5 row-cols-1 row-cols-md-2 row-cols-lg-4 fbox3">
-    <div class="col d-flex justify-content-center align-items-center"><a data-fancybox="gallery"
-                                                                         data-caption="Logotipo Pintando Sonhos"
-                                                                         href="assets/img/trabalhos/Pintando-Sonhos.webp"><img
-            class="img-fluid" src="assets/img/trabalhos/Pintando-Sonhos.webp" alt="Logotipo Pintando Sonhos"></a>
-    </div>
-    <div class="col d-flex justify-content-center align-items-center"><a data-fancybox="gallery"
-                                                                         data-caption="Banner NISHALVEN"
-                                                                         href="assets/img/trabalhos/Nishalven%2003_Prancheta%201.webp"><img
-            class="img-fluid" src="assets/img/trabalhos/Nishalven%2003_Prancheta%201.webp"
-            alt="Banner NISHALVEN"></a></div>
-    <div class="col d-flex justify-content-center align-items-center"><a data-fancybox="gallery"
-                                                                         data-caption="Curso CIS SALGADOS"
-                                                                         href="assets/img/trabalhos/Curso%20Panfleto%20ÔÇô%201.webp"><img
-            class="img-fluid" src="assets/img/trabalhos/Curso%20Panfleto%20ÔÇô%201.webp"
-            alt="Curso CIS SALGADOS"></a></div>
-    <div class="col d-flex justify-content-center align-items-center"><a data-fancybox="gallery"
-                                                                         data-caption="Cardápio CIS SALGADOS"
-                                                                         href="assets/img/trabalhos/Web%201920%20–%201.webp"><img
-            class="img-fluid" src="assets/img/trabalhos/Web%201920%20–%201.webp" alt="Cardápio CIS SALGADOS"></a>
-    </div>
-  </div>
-  <div class="d-flex justify-content-center align-items-center barra"><span></span></div>
-</div>
-<div class="container py-4 acerca" id="acerca">
-  <div class="section-info"><span></span>
-    <div><h1>Acerca.</h1></div>
-    <small class="text-uppercase">Saiba um pouco sobre o adérito l. de barros</small></div>
-  <div class="d-flex justify-content-between align-items-center"></div>
-  <div class="row justify-content-between">
-    <div class="col-lg-5 d-flex flex-column justify-content-center">
-      <p>
-        Olá! Sou Adérito De Barros, programador fullstack apaixonado por boas práticas, inovação e soluções eficientes.
-        Atuo com Laravel, Livewire, Vue.js/Quasar, e presto consultoria em desenvolvimento ágil e escalável.
-        <br>
-        <br>
-        Atualmente aprofundando conhecimentos na <strong>Explicador Inc.</strong>
+      <p class="nav fs-sm pt-3 pb-2 pb-lg-0 mb-0">
+        <span class="text-body-secondary">&copy; Todos os direitos reservados. Feito por</span>
+        <a class="nav-link fw-normal p-0 ms-1" href="#" target="_blank" rel="noopener">Adérito De Barros</a>
       </p>
-      <!--<p>Olá! Sou Adérito De Barros, atuo como
-      desenvolvedor de interface e front-end. Sou apaixonado por interface perfeitas, minimalistas e fáceis de
-      usar.<br><br>Atualmente aprofundando conhecimentos em <strong>desenvolvimento web &amp; mobile</strong> na
-      Explicador Inc.
-      </p>-->
     </div>
-    <div class="col-lg-5 d-flex flex-column justify-content-center">
-      <div class="photo"></div>
-    </div>
-  </div>
-  <div class="d-flex justify-content-center align-items-center barra"><span></span></div>
-</div>
-<div class="container py-4 contacto" id="contacto">
-  <div class="section-info"><span></span>
-    <div><h1>Vamos conversar.</h1></div>
-    <small class="text-uppercase">Não exite em contactar</small></div>
-  <div class="row gx-5 gy-5 flex-md-row-reverse mb-5 pb-5">
-    <div class="col d-flex flex-column justify-content-center align-items-center">
-      <form data-bss-recipient="9b168dcf30b982128aba1dedf9f13d3b" data-bss-loading-message="Enviando..."
-            data-bss-success-message="Sua mensagem foi entregue com sucesso"
-            data-bss-error-message="Algo deu errado, agradeceria que tentasse novamente"
-            data-bss-empty-form-message="Porfavor preencha os campos vazios" data-bss-close="Fechar"
-            data-bss-redirect-url="index.html" data-bss-subject="E-mail do Portifolio">
-        <div class="row">
-          <div class="col"><label class="form-label w-100">Nome<input class="bg-dark form-control" type="text"
-                                                                      required=""></label><label
-                  class="form-label w-100">E-mail<input class="bg-dark form-control" type="email"
-                                                        required=""></label><label
-                  class="form-label w-100">Telefone<br><input class="bg-dark form-control" type="tel"
-                                                              required=""></label><label
-                  class="form-label w-100">Mensagem<textarea class="bg-dark form-control" rows="4"
-                                                             required=""></textarea></label></div>
-        </div>
-        <div class="d-flex justify-content-end">
-          <button class="btn btn-outline-danger" type="submit">Enviar</button>
-        </div>
-      </form>
-    </div>
-    <div class="col-auto col-md-5">
-      <div class="d-flex justify-content-center align-items-center bg-contact"><img class="img-fluid"
-                                                                                    src="assets/img/logo/Logo-Adérito-White.webp">
-      </div>
-    </div>
-  </div>
-  <div class="d-flex justify-content-center align-items-center barra"><span></span></div>
-</div>
-<section>
-  <div class="container py-4 contacto">
-    <div class="row">
-      <div class="col-12 col-lg-4 text-center text-lg-start">
-        <ul class="list-unstyled contacto">
-          <li><a href="tel:+2581357516">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
-                 viewBox="0 0 16 16" class="bi bi-telephone">
-              <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"></path>
-            </svg>
-            +258 841 357 516</a></li>
-          <li><a href="mailto:aderitolaquete96@gmail.com" mailto="">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
-                 viewBox="0 0 16 16" class="bi bi-envelope-open">
-              <path fill-rule="evenodd"
-                    d="M8.47 1.318a1 1 0 0 0-.94 0l-6 3.2A1 1 0 0 0 1 5.4v.817l5.75 3.45L8 8.917l1.25.75L15 6.217V5.4a1 1 0 0 0-.53-.882l-6-3.2ZM15 7.383l-4.778 2.867L15 13.117V7.383Zm-.035 6.88L8 10.082l-6.965 4.18A1 1 0 0 0 2 15h12a1 1 0 0 0 .965-.738ZM1 13.116l4.778-2.867L1 7.383v5.734ZM7.059.435a2 2 0 0 1 1.882 0l6 3.2A2 2 0 0 1 16 5.4V14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5.4a2 2 0 0 1 1.059-1.765l6-3.2Z"></path>
-            </svg>
-            aderitolaquete96@gmail.com</a></li>
-        </ul>
-      </div>
-      <div class="col-12 col-lg-4 text-center"><h3>Vamos conversar?</h3></div>
-      <div class="col-12 col-lg-4 text-center d-flex justify-content-center align-items-center align-items-sm-center justify-content-lg-end">
-        <div class="redes-sociais"><a class="m-2" href="https://www.facebook.com/aderitolaquete.delito/"
-                                      target="_blank">
-          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
-               viewBox="0 0 16 16" class="bi bi-facebook">
-            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"></path>
-          </svg>
-        </a><a class="m-2" href="https://wa.me/+258841357516" target="_blank">
-          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
-               viewBox="0 0 16 16" class="bi bi-whatsapp">
-            <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"></path>
-          </svg>
-        </a><a class="m-2" href="https://www.linkedin.com/in/ad%C3%A9rito-de-barros-798bb2229/" target="_blank">
-          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
-               viewBox="0 0 16 16" class="bi bi-linkedin">
-            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"></path>
-          </svg>
-        </a></div>
-      </div>
-    </div>
-  </div>
-</section>
-<footer>
-  <div class="container text-center">
-    <p id="copyright"></p>
+  </footer>
 
-    <script>
-      const anoAtual = new Date().getFullYear();
-      document.getElementById("copyright").innerHTML = `${anoAtual} © Adérito De Barros`;
-    </script>
 
-  </div>
-</footer>
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/bootstrap/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.8/fancybox/fancybox.umd.js"></script>
-<script src="assets/js/script.min.js"></script>
+  <!-- Back to top button -->
+  <a class="btn-scroll-top" href="#top" data-scroll="" aria-label="Scroll back to top">
+    <svg viewbox="0 0 40 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="20" cy="20" r="19" fill="none" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10">
+      </circle>
+    </svg>
+    <i class="ai-arrow-up"></i>
+  </a>
+
+
+  <!-- Vendor scripts: JS libraries and plugins -->
+  <script src="around.createx.studio/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="around.createx.studio/assets/vendor/parallax-js/dist/parallax.min.js"></script>
+  <script src="around.createx.studio/assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="around.createx.studio/assets/vendor/aos/dist/aos.js"></script>
+
+  <!-- Bootstrap + Theme scripts -->
+  <script src="around.createx.studio/assets/js/theme.min.js"></script>
+
+
 </body>
+
 </html>
