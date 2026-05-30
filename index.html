@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en" data-bs-theme="light">
+<html lang="pt" data-bs-theme="light">
 
 <head>
   <meta charset="utf-8">
@@ -16,6 +16,27 @@
     content="web developer, fullstack, laravel, vue.js, moçambique, sites, aplicativos, programador, adérito de barros">
   <meta name="author" content="Adérito De Barros">
 
+  <!-- Canonical -->
+  <link rel="canonical" href="https://aderitodebarros.github.io/">
+
+  <!-- Open Graph (Facebook / WhatsApp / LinkedIn) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aderitodebarros.github.io/">
+  <meta property="og:title" content="Adérito De Barros | Full-Stack Developer">
+  <meta property="og:description" content="Desenvolvedor Web Full-Stack em Moçambique, especializado em Laravel, Vue.js e integrações de pagamento (M-Pesa, E-Mola, PayPal, Stripe).">
+  <meta property="og:image" content="https://aderitodebarros.github.io/assets/img/trabalhos/mudesa.webp">
+  <meta property="og:image:width" content="1600">
+  <meta property="og:image:height" content="1000">
+  <meta property="og:image:alt" content="Website MUDESA, desenvolvido por Adérito De Barros">
+  <meta property="og:locale" content="pt_PT">
+  <meta property="og:site_name" content="Adérito De Barros">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Adérito De Barros | Full-Stack Developer">
+  <meta name="twitter:description" content="Desenvolvedor Web Full-Stack em Moçambique, especializado em Laravel, Vue.js e integrações de pagamento.">
+  <meta name="twitter:image" content="https://aderitodebarros.github.io/assets/img/trabalhos/mudesa.webp">
+
   <!-- Favicon -->
   <link rel="icon" type="image/webp" href="assets/img/logo/favico.webp">
 
@@ -23,10 +44,10 @@
   <!-- Theme switcher (color modes) -->
   <script src="around.createx.studio/assets/js/theme-switcher.js"></script>
 
-  <!-- Import Google font (Inter) -->
+  <!-- Fonts: Fraunces (display) + Hanken Grotesk (body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-  <link href="css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" id="google-font">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,560;1,9..144,400&family=Hanken+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet" id="google-font">
 
   <!-- Vendor styles -->
   <link rel="stylesheet" media="screen" href="around.createx.studio/assets/vendor/aos/dist/aos.css">
@@ -37,6 +58,9 @@
 
   <!-- Theme styles + Bootstrap -->
   <link rel="stylesheet" media="screen" href="around.createx.studio/assets/css/theme.min.css">
+
+  <!-- Premium identity layer -->
+  <link rel="stylesheet" href="assets/css/premium.css">
 
   <!-- Customizer generated styles -->
   <style id="customizer-styles"></style>
@@ -142,18 +166,7 @@
     }
   </style>
 
-  <!-- Page loading scripts -->
-  <script>
-    (function () {
-      window.onload = function () {
-        const preloader = document.querySelector('.page-loading')
-        preloader.classList.remove('active')
-        setTimeout(function () {
-          preloader.remove()
-        }, 1500)
-      }
-    })()
-  </script>
+  <!-- (preloader removido para carregamento imediato) -->
 
 
 </head>
@@ -163,19 +176,14 @@
 
 <body>
 
-  <!-- Page loading spinner -->
-  <div class="page-loading active">
-    <div class="page-loading-inner">
-      <div class="page-spinner"></div>
-      <span>Loading...</span>
-    </div>
-  </div>
 
+
+  <!-- Reading progress bar -->
+  <div class="p-progress" aria-hidden="true"></div>
 
   <!-- Page wrapper -->
   <main class="page-wrapper">
 
-    <!-- Navbar. Remove 'fixed-top' class to make the navigation bar scrollable with the page -->
     <!-- Navbar. Remove 'fixed-top' class to make the navigation bar scrollable with the page -->
     <header class="navbar navbar-expand-lg fixed-top">
       <div class="container">
@@ -198,6 +206,14 @@
             <i class="ai-moon fs-lg"></i>
           </label>
         </div>
+
+        <!-- GitHub + paleta de comandos -->
+        <a class="p-gh order-lg-2 me-2 me-lg-3 d-none d-sm-inline-flex" href="https://github.com/aderitodebarros"
+          target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A7.65 7.65 0 0 1 8 4.77c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
+        </a>
+        <button class="p-kbd order-lg-2 me-3 me-lg-4 d-none d-lg-inline-flex" type="button" data-cmdk-open
+          aria-label="Abrir paleta de comandos"><span style="font-size:.95em">⌘</span>K</button>
 
         <!-- Contact Button -->
         <a class="btn btn-primary btn-sm fs-sm order-lg-3 d-none d-sm-inline-flex" href="#contacto">
@@ -231,38 +247,60 @@
 
 
     <!-- Hero -->
-    <section class="overflow-hidden">
+    <section class="overflow-hidden" id="inicio">
       <div class="container pt-2 pt-sm-4 pb-sm-2 pb-md-4 py-xl-5 mt-5">
         <div class="row align-items-center py-5 mt-md-2 my-lg-3 my-xl-4 my-xxl-5">
           <div
             class="col-lg-7 order-lg-2 d-flex justify-content-center justify-content-lg-end mb-4 mb-md-5 mb-lg-0 pb-3 pb-md-0">
-            <div class="parallax me-lg-n4 me-xl-n5" style="max-width: 667px;">
-              <div class="parallax-layer" data-depth="0.1">
-                <img src="around.createx.studio/assets/img/landing/business-consulting/hero/01.png" alt="Layer">
+            <div class="position-relative w-100 p-tilt" style="max-width: 640px;">
+              <!-- Mockup de janela de browser com um projeto real -->
+              <div class="rounded-4 overflow-hidden shadow-lg border p-browser">
+                <div class="d-flex align-items-center px-3 py-2 bg-secondary border-bottom p-browser-bar">
+                  <span class="d-block rounded-circle me-2" style="width: 11px; height: 11px; background: #ff5f57;"></span>
+                  <span class="d-block rounded-circle me-2" style="width: 11px; height: 11px; background: #febc2e;"></span>
+                  <span class="d-block rounded-circle" style="width: 11px; height: 11px; background: #28c840;"></span>
+                  <span class="d-block ms-3 px-3 py-1 rounded-pill bg-body text-body-secondary text-truncate"
+                    style="font-size: .8rem; max-width: 60%;">mudesa.co.mz</span>
+                </div>
+                <a href="https://mudesa.co.mz/" target="_blank" rel="noopener" aria-label="Abrir o site da MUDESA">
+                  <img class="d-block w-100" src="assets/img/trabalhos/mudesa.webp"
+                    alt="Site da MUDESA, desenvolvido por Adérito De Barros">
+                </a>
               </div>
-              <div class="parallax-layer" data-depth="-0.2">
-                <img src="around.createx.studio/assets/img/landing/business-consulting/hero/02.png" alt="Layer">
-              </div>
-              <div class="parallax-layer" data-depth="0.25">
-                <img src="around.createx.studio/assets/img/landing/business-consulting/hero/03.png" alt="Layer">
+
+              <!-- Editor de código a flutuar: "código → resultado" -->
+              <div class="p-code p-win d-none d-lg-block" aria-hidden="true">
+                <div class="p-win-bar">
+                  <span class="d" style="background:#ff5f57"></span><span class="d" style="background:#febc2e"></span><span class="d" style="background:#28c840"></span>
+                  <span class="p-win-name">PaymentController.php</span>
+                </div>
+                <pre class="p-code-body"><span class="ln">1</span><span class="tok-c">// Pagamento via M-Pesa</span>
+<span class="ln">2</span><span class="tok-k">public function</span> <span class="tok-f">charge</span><span class="tok-p">(</span><span class="tok-v">$order</span><span class="tok-p">)</span>
+<span class="ln">3</span><span class="tok-p">{</span>
+<span class="ln">4</span>    <span class="tok-v">$res</span> = <span class="tok-v">Mpesa</span><span class="tok-p">::</span><span class="tok-f">c2b</span><span class="tok-p">([</span>
+<span class="ln">5</span>        <span class="tok-s">'amount'</span> =&gt; <span class="tok-v">$order</span>-&gt;total<span class="tok-p">,</span>
+<span class="ln">6</span>        <span class="tok-s">'phone'</span>  =&gt; <span class="tok-v">$order</span>-&gt;phone<span class="tok-p">,</span>
+<span class="ln">7</span>    <span class="tok-p">]);</span>
+<span class="ln">8</span>    <span class="tok-k">return</span> <span class="tok-v">$res</span>-&gt;<span class="tok-f">successful</span><span class="tok-p">();</span>
+<span class="ln">9</span><span class="tok-p">}</span></pre>
               </div>
             </div>
           </div>
-          <div class="col-lg-5 order-lg-1">
-            <h1 class="display-3 text-center text-lg-start pb-sm-2 pb-md-3">Soluções Eficientes para o seu Negócio</h1>
-            <p class="fs-lg text-center text-lg-start pb-xl-2 mx-auto mx-lg-0 mb-5" style="max-width: 420px;">
-              Transformo ideias em realidade digital com estratégias de desenvolvimento modernas e focadas em
-              resultados.
+          <div class="col-lg-5 order-lg-1 p-load">
+            <span class="p-status"><span class="p-status-dot"></span>Disponível para novos projetos</span>
+            <h1 class="display-3 pb-sm-2 pb-md-3">Programador Full-Stack — do conceito ao <span class="p-mark">deploy</span></h1>
+            <p class="fs-lg pb-xl-2 mb-5" style="max-width: 460px;">
+              Construo sites e aplicações web rápidas, seguras e escaláveis com Laravel e Vue.js — incluindo
+              integrações de pagamento como M-Pesa, E-Mola e Stripe.
             </p>
-            <div class="d-flex justify-content-center justify-content-lg-start">
-              <a class="btn btn-lg btn-primary" href="#contacto">Vamos Iniciar</a>
-              <a class="btn btn-lg btn-outline-dark ms-3" href="#trabalhos">Ver Projetos</a>
+            <div class="d-flex flex-wrap gap-3">
+              <a class="btn btn-lg btn-primary" href="#contacto">Vamos iniciar</a>
+              <a class="btn btn-lg btn-outline-dark" href="#trabalhos">Ver projetos</a>
             </div>
           </div>
         </div>
       </div>
     </section>
-
 
     <!-- Tecnologias (Partners) -->
     <section class="pb-5 pt-2 pt-sm-3 pt-md-4 pt-lg-5 my-xl-3 my-xxl-5">
@@ -423,290 +461,12 @@
       </div>
     </section>
 
-    <!-- Tecnologias (Partners) 2 -->
-    <section class="pb-5 pt-2 pt-sm-3 pt-md-4 pt-lg-5 my-xl-3 my-xxl-5">
-
-      <div class="swiper pb-4 swiper-initialized swiper-horizontal swiper-free-mode swiper-backface-hidden"
-        data-swiper-options="{
-          &quot;spaceBetween&quot;: 24,
-          &quot;loop&quot;: true,
-          &quot;grabCursor&quot;: false,
-          &quot;centeredSlides&quot;: true,
-          &quot;autoplay&quot;: {
-            &quot;delay&quot;: 0,
-            &quot;disableOnInteraction&quot;: false
-          },
-          &quot;freeMode&quot;: true,
-          &quot;speed&quot;: 10000,
-          &quot;freeModeMomentum&quot;: false,
-          &quot;breakpoints&quot;: {
-            &quot;0&quot;: { &quot;slidesPerView&quot;: 2 },
-            &quot;400&quot;: { &quot;slidesPerView&quot;: 3 },
-            &quot;600&quot;: { &quot;slidesPerView&quot;: 4 },
-            &quot;800&quot;: { &quot;slidesPerView&quot;: 5 },
-            &quot;1200&quot;: { &quot;slidesPerView&quot;: 6 },
-            &quot;1400&quot;: { &quot;slidesPerView&quot;: 7 },
-            &quot;1600&quot;: { &quot;slidesPerView&quot;: 8 }
-          }
-        }">
-        <div class="swiper-wrapper"
-          style="transition-timing-function: linear !important; transition-duration: 10000ms; transform: translate3d(-424.286px, 0px, 0px);"
-          id="swiper-wrapper-b31d680f10857bf31" aria-live="off">
-
-
-
-
-
-
-
-
-
-          <div class="swiper-slide" role="group" aria-label="6 / 9" data-swiper-slide-index="5"
-            style="width: 188.143px; margin-right: 24px;">
-            <div class="bg-gray rounded-4">
-              <img class="d-block d-dark-mode-none mx-auto"
-                src="around.createx.studio/assets/img/landing/business-consulting/clients/06-dark.svg" width="196"
-                alt="Logo">
-              <img class="d-none d-dark-mode-block mx-auto"
-                src="around.createx.studio/assets/img/landing/business-consulting/clients/06-light.svg" width="196"
-                alt="Logo">
-            </div>
-          </div>
-          <div class="swiper-slide" role="group" aria-label="7 / 9" data-swiper-slide-index="6"
-            style="width: 188.143px; margin-right: 24px;">
-            <div class="bg-gray rounded-4">
-              <img class="d-block d-dark-mode-none mx-auto"
-                src="around.createx.studio/assets/img/landing/business-consulting/clients/03-dark.svg" width="196"
-                alt="Logo">
-              <img class="d-none d-dark-mode-block mx-auto"
-                src="around.createx.studio/assets/img/landing/business-consulting/clients/03-light.svg" width="196"
-                alt="Logo">
-            </div>
-          </div>
-          <div class="swiper-slide" role="group" aria-label="8 / 9" data-swiper-slide-index="7"
-            style="width: 188.143px; margin-right: 24px;">
-            <div class="bg-gray rounded-4">
-              <img class="d-block d-dark-mode-none mx-auto"
-                src="around.createx.studio/assets/img/landing/business-consulting/clients/05-dark.svg" width="196"
-                alt="Logo">
-              <img class="d-none d-dark-mode-block mx-auto"
-                src="around.createx.studio/assets/img/landing/business-consulting/clients/05-light.svg" width="196"
-                alt="Logo">
-            </div>
-          </div>
-          <div class="swiper-slide" role="group" aria-label="9 / 9" data-swiper-slide-index="8"
-            style="width: 188.143px; margin-right: 24px;">
-            <div class="bg-gray rounded-4">
-              <img class="d-block d-dark-mode-none mx-auto"
-                src="around.createx.studio/assets/img/landing/business-consulting/clients/02-dark.svg" width="196"
-                alt="Logo">
-              <img class="d-none d-dark-mode-block mx-auto"
-                src="around.createx.studio/assets/img/landing/business-consulting/clients/02-light.svg" width="196"
-                alt="Logo">
-            </div>
-          </div>
-          <div class="swiper-slide swiper-slide-prev" role="group" aria-label="1 / 9" data-swiper-slide-index="0"
-            style="width: 188.143px; margin-right: 24px;">
-            <div class="bg-gray rounded-4">
-              <img class="d-block d-dark-mode-none mx-auto"
-                src="around.createx.studio/assets/img/landing/business-consulting/clients/01-dark.svg" width="196"
-                alt="Logo">
-              <img class="d-none d-dark-mode-block mx-auto"
-                src="around.createx.studio/assets/img/landing/business-consulting/clients/01-light.svg" width="196"
-                alt="Logo">
-            </div>
-          </div>
-          <div class="swiper-slide swiper-slide-active" role="group" aria-label="2 / 9" data-swiper-slide-index="1"
-            style="width: 188.143px; margin-right: 24px;">
-            <div class="bg-gray rounded-4">
-              <img class="d-block d-dark-mode-none mx-auto"
-                src="around.createx.studio/assets/img/landing/business-consulting/clients/02-dark.svg" width="196"
-                alt="Logo">
-              <img class="d-none d-dark-mode-block mx-auto"
-                src="around.createx.studio/assets/img/landing/business-consulting/clients/02-light.svg" width="196"
-                alt="Logo">
-            </div>
-          </div>
-          <div class="swiper-slide swiper-slide-next" role="group" aria-label="3 / 9" data-swiper-slide-index="2"
-            style="width: 188.143px; margin-right: 24px;">
-            <div class="bg-gray rounded-4">
-              <img class="d-block d-dark-mode-none mx-auto"
-                src="around.createx.studio/assets/img/landing/business-consulting/clients/03-dark.svg" width="196"
-                alt="Logo">
-              <img class="d-none d-dark-mode-block mx-auto"
-                src="around.createx.studio/assets/img/landing/business-consulting/clients/03-light.svg" width="196"
-                alt="Logo">
-            </div>
-          </div>
-          <div class="swiper-slide" role="group" aria-label="4 / 9" data-swiper-slide-index="3"
-            style="width: 188.143px; margin-right: 24px;">
-            <div class="bg-gray rounded-4">
-              <img class="d-block d-dark-mode-none mx-auto"
-                src="around.createx.studio/assets/img/landing/business-consulting/clients/04-dark.svg" width="196"
-                alt="Logo">
-              <img class="d-none d-dark-mode-block mx-auto"
-                src="around.createx.studio/assets/img/landing/business-consulting/clients/04-light.svg" width="196"
-                alt="Logo">
-            </div>
-          </div>
-          <div class="swiper-slide" role="group" aria-label="5 / 9" data-swiper-slide-index="4"
-            style="width: 188.143px; margin-right: 24px;">
-            <div class="bg-gray rounded-4">
-              <img class="d-block d-dark-mode-none mx-auto"
-                src="around.createx.studio/assets/img/landing/business-consulting/clients/05-dark.svg" width="196"
-                alt="Logo">
-              <img class="d-none d-dark-mode-block mx-auto"
-                src="around.createx.studio/assets/img/landing/business-consulting/clients/05-light.svg" width="196"
-                alt="Logo">
-            </div>
-          </div>
-        </div>
-        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
-      </div>
-      <div class="swiper swiper-initialized swiper-horizontal swiper-free-mode swiper-rtl swiper-backface-hidden"
-        dir="rtl" data-swiper-options="{
-          &quot;spaceBetween&quot;: 24,
-          &quot;loop&quot;: true,
-          &quot;grabCursor&quot;: false,
-          &quot;centeredSlides&quot;: true,
-          &quot;autoplay&quot;: {
-            &quot;delay&quot;: 0,
-            &quot;disableOnInteraction&quot;: false
-          },
-          &quot;freeMode&quot;: true,
-          &quot;speed&quot;: 8500,
-          &quot;freeModeMomentum&quot;: false,
-          &quot;breakpoints&quot;: {
-            &quot;0&quot;: { &quot;slidesPerView&quot;: 2 },
-            &quot;400&quot;: { &quot;slidesPerView&quot;: 3 },
-            &quot;600&quot;: { &quot;slidesPerView&quot;: 4 },
-            &quot;800&quot;: { &quot;slidesPerView&quot;: 5 },
-            &quot;1200&quot;: { &quot;slidesPerView&quot;: 6 },
-            &quot;1400&quot;: { &quot;slidesPerView&quot;: 7 },
-            &quot;1600&quot;: { &quot;slidesPerView&quot;: 8 }
-          }
-        }">
-        <div class="swiper-wrapper"
-          style="transition-timing-function: linear !important; transition-duration: 8500ms; transform: translate3d(424.286px, 0px, 0px);"
-          id="swiper-wrapper-de9db56f3faa51043" aria-live="off">
-
-
-
-
-
-
-
-
-
-          <div class="swiper-slide" role="group" aria-label="3 / 9" data-swiper-slide-index="2"
-            style="width: 188.143px; margin-left: 24px;">
-            <div class="bg-gray rounded-4">
-              <img class="d-block d-dark-mode-none mx-auto"
-                src="around.createx.studio/assets/img/landing/business-consulting/clients/04-dark.svg" width="196"
-                alt="Logo">
-              <img class="d-none d-dark-mode-block mx-auto"
-                src="around.createx.studio/assets/img/landing/business-consulting/clients/04-light.svg" width="196"
-                alt="Logo">
-            </div>
-          </div>
-          <div class="swiper-slide" role="group" aria-label="4 / 9" data-swiper-slide-index="3"
-            style="width: 188.143px; margin-left: 24px;">
-            <div class="bg-gray rounded-4">
-              <img class="d-block d-dark-mode-none mx-auto"
-                src="around.createx.studio/assets/img/landing/business-consulting/clients/02-dark.svg" width="196"
-                alt="Logo">
-              <img class="d-none d-dark-mode-block mx-auto"
-                src="around.createx.studio/assets/img/landing/business-consulting/clients/02-light.svg" width="196"
-                alt="Logo">
-            </div>
-          </div>
-          <div class="swiper-slide" role="group" aria-label="5 / 9" data-swiper-slide-index="4"
-            style="width: 188.143px; margin-left: 24px;">
-            <div class="bg-gray rounded-4">
-              <img class="d-block d-dark-mode-none mx-auto"
-                src="around.createx.studio/assets/img/landing/business-consulting/clients/03-dark.svg" width="196"
-                alt="Logo">
-              <img class="d-none d-dark-mode-block mx-auto"
-                src="around.createx.studio/assets/img/landing/business-consulting/clients/03-light.svg" width="196"
-                alt="Logo">
-            </div>
-          </div>
-          <div class="swiper-slide" role="group" aria-label="6 / 9" data-swiper-slide-index="5"
-            style="width: 188.143px; margin-left: 24px;">
-            <div class="bg-gray rounded-4">
-              <img class="d-block d-dark-mode-none mx-auto"
-                src="around.createx.studio/assets/img/landing/business-consulting/clients/01-dark.svg" width="196"
-                alt="Logo">
-              <img class="d-none d-dark-mode-block mx-auto"
-                src="around.createx.studio/assets/img/landing/business-consulting/clients/01-light.svg" width="196"
-                alt="Logo">
-            </div>
-          </div>
-          <div class="swiper-slide swiper-slide-prev" role="group" aria-label="7 / 9" data-swiper-slide-index="6"
-            style="width: 188.143px; margin-left: 24px;">
-            <div class="bg-gray rounded-4">
-              <img class="d-block d-dark-mode-none mx-auto"
-                src="around.createx.studio/assets/img/landing/business-consulting/clients/04-dark.svg" width="196"
-                alt="Logo">
-              <img class="d-none d-dark-mode-block mx-auto"
-                src="around.createx.studio/assets/img/landing/business-consulting/clients/04-light.svg" width="196"
-                alt="Logo">
-            </div>
-          </div>
-          <div class="swiper-slide swiper-slide-active" role="group" aria-label="8 / 9" data-swiper-slide-index="7"
-            style="width: 188.143px; margin-left: 24px;">
-            <div class="bg-gray rounded-4">
-              <img class="d-block d-dark-mode-none mx-auto"
-                src="around.createx.studio/assets/img/landing/business-consulting/clients/02-dark.svg" width="196"
-                alt="Logo">
-              <img class="d-none d-dark-mode-block mx-auto"
-                src="around.createx.studio/assets/img/landing/business-consulting/clients/02-light.svg" width="196"
-                alt="Logo">
-            </div>
-          </div>
-          <div class="swiper-slide swiper-slide-next" role="group" aria-label="9 / 9" data-swiper-slide-index="8"
-            style="width: 188.143px; margin-left: 24px;">
-            <div class="bg-gray rounded-4">
-              <img class="d-block d-dark-mode-none mx-auto"
-                src="around.createx.studio/assets/img/landing/business-consulting/clients/03-dark.svg" width="196"
-                alt="Logo">
-              <img class="d-none d-dark-mode-block mx-auto"
-                src="around.createx.studio/assets/img/landing/business-consulting/clients/03-light.svg" width="196"
-                alt="Logo">
-            </div>
-          </div>
-          <div class="swiper-slide" role="group" aria-label="1 / 9" data-swiper-slide-index="0"
-            style="width: 188.143px; margin-left: 24px;">
-            <div class="bg-gray rounded-4">
-              <img class="d-block d-dark-mode-none mx-auto"
-                src="around.createx.studio/assets/img/landing/business-consulting/clients/06-dark.svg" width="196"
-                alt="Logo">
-              <img class="d-none d-dark-mode-block mx-auto"
-                src="around.createx.studio/assets/img/landing/business-consulting/clients/06-light.svg" width="196"
-                alt="Logo">
-            </div>
-          </div>
-          <div class="swiper-slide" role="group" aria-label="2 / 9" data-swiper-slide-index="1"
-            style="width: 188.143px; margin-left: 24px;">
-            <div class="bg-gray rounded-4">
-              <img class="d-block d-dark-mode-none mx-auto"
-                src="around.createx.studio/assets/img/landing/business-consulting/clients/05-dark.svg" width="196"
-                alt="Logo">
-              <img class="d-none d-dark-mode-block mx-auto"
-                src="around.createx.studio/assets/img/landing/business-consulting/clients/05-light.svg" width="196"
-                alt="Logo">
-            </div>
-          </div>
-        </div>
-        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
-      </div>
-    </section>
-
     <!-- Services (Habilidades) -->
     <section class="container py-5 my-md-2 my-lg-3 my-xl-4 my-xxl-5" id="servicos">
       <div class="row align-items-center py-1 py-sm-3 py-md-4 my-lg-2">
         <div class="col-lg-4 offset-xl-1" data-aos="fade-right" data-aos-duration="600" data-aos-offset="200">
-          <h2 class="h1 text-center text-lg-start pb-3 pb-lg-1">Minhas Habilidades</h2>
+          <div class="p-eyebrow"><b>01</b><span>Competências</span></div>
+          <h2 class="h1 pb-3 pb-lg-1">Minhas Habilidades</h2>
 
           <!-- Show on screens > 992px -->
           <ul class="list-unstyled d-none d-lg-block pb-3 mb-3 mb-lg-4">
@@ -788,13 +548,23 @@
           <div class="col-md-5 d-flex flex-column align-items-center mb-4 mb-md-0">
             <div class="position-relative" style="max-width: 416px;">
               <!-- Usando logo como placeholder até ter foto profissional recortada -->
-              <img class="d-block position-relative z-2" src="assets/img/IMG_0143.webp" alt="Adérito De Barros">
+              <img loading="lazy" class="d-block position-relative z-2" src="assets/img/IMG_0143.webp" alt="Adérito De Barros">
               <div class="bg-primary position-absolute start-0 bottom-0 w-100"
                 style="height: 85.4%; border-radius: 2.25rem 8rem 2.25rem 2.25rem;"></div>
             </div>
             <div class="text-center text-md-start pt-3 mt-3">
               <h2 class="mb-2">Adérito De Barros</h2>
               <p class="fs-xl text-body-secondary mb-2">Programador Full-Stack</p>
+
+              <!-- Terminal: whoami -->
+              <div class="p-term p-win mb-4">
+                <div class="p-win-bar">
+                  <span class="d" style="background:#ff5f57"></span><span class="d" style="background:#febc2e"></span><span class="d" style="background:#28c840"></span>
+                  <span class="p-win-name">zsh — adérito@dev</span>
+                </div>
+                <pre class="p-term-body"><span id="termOut"></span><span class="p-term-cursor"></span></pre>
+              </div>
+
               <div class="position-relative pt-4" style="max-width: 500px;">
                 <div class="position-absolute top-0 start-0 w-100 text-center text-md-start ms-md-1">
                   <svg class="text-border" width="155" height="111" viewbox="0 0 155 111" fill="currentColor"
@@ -877,43 +647,46 @@
 
 
     <!-- Trabalhos Title -->
-    <div class="container text-center pt-5 mt-lg-3 mt-xl-4 mt-xxl-5 pb-3 mb-3 mb-lg-4" id="trabalhos">
+    <div class="container pt-5 mt-lg-3 mt-xl-4 mt-xxl-5 pb-3 mb-3 mb-lg-4" id="trabalhos">
+      <div class="p-eyebrow"><b>02</b><span>Trabalhos selecionados</span></div>
       <h2 class="h1 mb-2">Trabalhos Recentes</h2>
-      <p class="fs-lg text-body-secondary">Alguns dos projetos que tenho orgulho de ter desenvolvido.</p>
+      <p class="fs-lg text-body-secondary" style="max-width: 580px;">Desenvolvimento web, design e identidade visual — uma seleção do meu trabalho recente.</p>
     </div>
 
-    <!-- Project 1: Pintando Sonhos -->
-    <section class="overflow-hidden pb-5">
+    <!-- Projeto 1: MUDESA (destaque) -->
+    <section class="overflow-hidden pb-5 p-project">
       <div class="container pb-sm-3 mb-md-2 mb-lg-3">
         <div class="row g-4">
           <div class="col-md-7" data-aos="fade-right" data-aos-duration="600" data-aos-offset="280"
             data-disable-parallax-down="md">
-            <img class="object-fit-cover w-100 h-100 rounded-3" src="assets/img/trabalhos/Pintando-Sonhos.webp"
-              alt="Pintando Sonhos">
+            <a class="p-figure" href="https://mudesa.co.mz/" target="_blank" rel="noopener" aria-label="Abrir o site (nova aba)"><img loading="lazy" class="object-fit-cover w-100 h-100 rounded-3" src="assets/img/trabalhos/mudesa.webp"
+              alt="Website MUDESA — gráfica e serigrafia"></a>
           </div>
           <div class="col-md-5" data-aos="fade-left" data-aos-duration="600" data-aos-offset="280"
             data-disable-parallax-down="md">
-            <div class="d-flex flex-column h-100 bg-secondary rounded-3 py-5 px-4 px-lg-5">
-              <span class="badge bg-primary bg-opacity-10 text-primary mb-3 align-self-start">Branding</span>
-              <h2 class="h3 mb-3">Pintando Sonhos</h2>
-              <p class="mb-4">Desenvolvimento de identidade visual completa, transmitindo criatividade e
-                profissionalismo. O projeto incluiu logo, paleta de cores e aplicações em mídias sociais.</p>
+            <div class="d-flex flex-column h-100 bg-secondary rounded-3 py-5 px-4 px-lg-5 p-project-panel">
+              <span class="badge bg-primary bg-opacity-10 text-primary mb-3 align-self-start">Loja Online</span>
+              <h2 class="h3 mb-3">MUDESA — Gráfica &amp; Serigrafia</h2>
+              <p class="mb-4">Plataforma web e loja online para uma empresa de comunicação visual e produção gráfica:
+                catálogo de serviços, loja com carrinho e contas de cliente, testemunhos e contacto direto via
+                WhatsApp.</p>
               <ul class="list-unstyled mb-4">
                 <li class="d-flex pb-2 mb-1">
                   <span class="bg-primary mt-2 me-2" style="width: 10px; height: 10px; border-radius: 2px;"></span>
-                  Logotipo Exclusivo
+                  Desenvolvimento Full-Stack (Laravel)
                 </li>
                 <li class="d-flex pb-2 mb-1">
                   <span class="bg-primary mt-2 me-2" style="width: 10px; height: 10px; border-radius: 2px;"></span>
-                  Manual da Marca
+                  Loja online com carrinho e contas
                 </li>
                 <li class="d-flex pb-2 mb-1">
                   <span class="bg-primary mt-2 me-2" style="width: 10px; height: 10px; border-radius: 2px;"></span>
-                  Identidade Visual
+                  Responsivo, com tema claro/escuro
                 </li>
               </ul>
               <div class="mt-auto">
-                <a class="btn btn-outline-primary" href="#">Ver Detalhes</a>
+                <a class="btn btn-outline-primary" href="https://mudesa.co.mz/" target="_blank" rel="noopener">Visitar
+                  site</a>
               </div>
             </div>
           </div>
@@ -921,34 +694,39 @@
       </div>
     </section>
 
-    <!-- Project 2: NISHALVEN -->
-    <section class="overflow-hidden pb-5">
+    <!-- Projeto 2: AEFIMO -->
+    <section class="overflow-hidden pb-5 p-project">
       <div class="container pb-sm-3 mb-md-2 mb-lg-3">
         <div class="row g-4">
           <div class="col-md-7 order-md-2" data-aos="fade-left" data-aos-duration="600" data-aos-offset="280"
             data-disable-parallax-down="md">
-            <img class="object-fit-cover w-100 h-100 rounded-3"
-              src="assets/img/trabalhos/Nishalven%2003_Prancheta%201.webp" alt="Nishalven">
+            <a class="p-figure" href="https://aefimo.org.mz/" target="_blank" rel="noopener" aria-label="Abrir o site (nova aba)"><img loading="lazy" class="object-fit-cover w-100 h-100 rounded-3" src="assets/img/trabalhos/aefimo.webp"
+              alt="Website AEFIMO — Jovem Filosofia Moçambicana"></a>
           </div>
           <div class="col-md-5 order-md-1" data-aos="fade-right" data-aos-duration="600" data-aos-offset="280"
             data-disable-parallax-down="md">
-            <div class="d-flex flex-column h-100 bg-secondary rounded-3 py-5 px-4 px-lg-5">
-              <span class="badge bg-warning bg-opacity-10 text-warning mb-3 align-self-start">Branding & Banner</span>
-              <h2 class="h3 mb-3">Nishalven</h2>
-              <p class="mb-4">Criação de banners publicitários e materiais promocionais de alto impacto visual para
-                fortalecer a presença da marca no mercado.</p>
+            <div class="d-flex flex-column h-100 bg-secondary rounded-3 py-5 px-4 px-lg-5 p-project-panel">
+              <span class="badge bg-info bg-opacity-10 text-info mb-3 align-self-start">Plataforma Web</span>
+              <h2 class="h3 mb-3">AEFIMO</h2>
+              <p class="mb-4">Plataforma para a comunidade académica da Jovem Filosofia Moçambicana, reunindo leituras e
+                materiais, exames, eventos, galeria e páginas institucionais — tudo com gestão de conteúdos.</p>
               <ul class="list-unstyled mb-4">
                 <li class="d-flex pb-2 mb-1">
                   <span class="bg-primary mt-2 me-2" style="width: 10px; height: 10px; border-radius: 2px;"></span>
-                  Banner Publicitário
+                  Desenvolvimento Full-Stack (Laravel)
                 </li>
                 <li class="d-flex pb-2 mb-1">
                   <span class="bg-primary mt-2 me-2" style="width: 10px; height: 10px; border-radius: 2px;"></span>
-                  Marketing Visual
+                  Gestão de conteúdos (leituras, eventos, galeria)
+                </li>
+                <li class="d-flex pb-2 mb-1">
+                  <span class="bg-primary mt-2 me-2" style="width: 10px; height: 10px; border-radius: 2px;"></span>
+                  Design responsivo
                 </li>
               </ul>
               <div class="mt-auto">
-                <a class="btn btn-outline-primary" href="#">Ver Detalhes</a>
+                <a class="btn btn-outline-primary" href="https://aefimo.org.mz/" target="_blank" rel="noopener">Visitar
+                  site</a>
               </div>
             </div>
           </div>
@@ -956,78 +734,45 @@
       </div>
     </section>
 
-    <!-- Project 3: Curso CIS -->
-    <section class="overflow-hidden pb-5">
+    <!-- Projeto 3: HELPS Education -->
+    <section class="overflow-hidden pb-5 p-project">
       <div class="container pb-sm-3 mb-md-2 mb-lg-3">
         <div class="row g-4">
           <div class="col-md-7" data-aos="fade-right" data-aos-duration="600" data-aos-offset="280"
             data-disable-parallax-down="md">
-            <img class="object-fit-cover w-100 h-100 rounded-3"
-              src="assets/img/trabalhos/Curso%20Panfleto%20ÔÇô%201.webp" alt="Curso CIS Salgados">
+            <a class="p-figure" href="https://helpseducation.org.mz/" target="_blank" rel="noopener" aria-label="Abrir o site (nova aba)"><img loading="lazy" class="object-fit-cover w-100 h-100 rounded-3"
+              src="assets/img/trabalhos/helps-education.webp" alt="Website HELPS Education — ONG de educação"></a>
           </div>
           <div class="col-md-5" data-aos="fade-left" data-aos-duration="600" data-aos-offset="280"
             data-disable-parallax-down="md">
-            <div class="d-flex flex-column h-100 bg-secondary rounded-3 py-5 px-4 px-lg-5">
-              <span class="badge bg-danger bg-opacity-10 text-danger mb-3 align-self-start">Design Gráfico</span>
-              <h2 class="h3 mb-3">Curso CIS Salgados</h2>
-              <p class="mb-4">Material de divulgação para curso profissionalizante. Foco na clareza da informação e
-                apelo visual para atrair novos alunos.</p>
+            <div class="d-flex flex-column h-100 bg-secondary rounded-3 py-5 px-4 px-lg-5 p-project-panel">
+              <span class="badge bg-warning bg-opacity-10 text-warning mb-3 align-self-start">ONG · Educação</span>
+              <h2 class="h3 mb-3">HELPS Education</h2>
+              <p class="mb-4">Site institucional para uma ONG que promove educação de qualidade em Moçambique: programas
+                e iniciativas (HISES, ABC+), galeria de fotos e vídeos e uma área dedicada a doadores.</p>
               <ul class="list-unstyled mb-4">
                 <li class="d-flex pb-2 mb-1">
                   <span class="bg-primary mt-2 me-2" style="width: 10px; height: 10px; border-radius: 2px;"></span>
-                  Flyer Promocional
+                  Desenvolvimento Full-Stack (Laravel)
                 </li>
                 <li class="d-flex pb-2 mb-1">
                   <span class="bg-primary mt-2 me-2" style="width: 10px; height: 10px; border-radius: 2px;"></span>
-                  Design para Redes Sociais
+                  Galeria multimédia (fotos e vídeos)
+                </li>
+                <li class="d-flex pb-2 mb-1">
+                  <span class="bg-primary mt-2 me-2" style="width: 10px; height: 10px; border-radius: 2px;"></span>
+                  Secção de programas e doadores
                 </li>
               </ul>
               <div class="mt-auto">
-                <a class="btn btn-outline-primary" href="#">Ver Detalhes</a>
+                <a class="btn btn-outline-primary" href="https://helpseducation.org.mz/" target="_blank"
+                  rel="noopener">Visitar site</a>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-
-    <!-- Project 4: Cardápio Digital -->
-    <section class="overflow-hidden pb-5">
-      <div class="container pb-sm-3 mb-md-2 mb-lg-3">
-        <div class="row g-4">
-          <div class="col-md-7 order-md-2" data-aos="fade-left" data-aos-duration="600" data-aos-offset="280"
-            data-disable-parallax-down="md">
-            <img class="object-fit-cover w-100 h-100 rounded-3" src="assets/img/trabalhos/Web%201920%20–%201.webp"
-              alt="Cardápio Digital">
-          </div>
-          <div class="col-md-5 order-md-1" data-aos="fade-right" data-aos-duration="600" data-aos-offset="280"
-            data-disable-parallax-down="md">
-            <div class="d-flex flex-column h-100 bg-secondary rounded-3 py-5 px-4 px-lg-5">
-              <span class="badge bg-info bg-opacity-10 text-info mb-3 align-self-start">Web Design</span>
-              <h2 class="h3 mb-3">Cardápio Digital</h2>
-              <p class="mb-4">Interface moderna e responsiva para cardápio digital, otimizando a experiência do cliente
-                e facilitando pedidos.</p>
-              <ul class="list-unstyled mb-4">
-                <li class="d-flex pb-2 mb-1">
-                  <span class="bg-primary mt-2 me-2" style="width: 10px; height: 10px; border-radius: 2px;"></span>
-                  UI/UX Design
-                </li>
-                <li class="d-flex pb-2 mb-1">
-                  <span class="bg-primary mt-2 me-2" style="width: 10px; height: 10px; border-radius: 2px;"></span>
-                  Responsividade
-                </li>
-              </ul>
-              <div class="mt-auto">
-                <a class="btn btn-outline-primary" href="#">Ver Detalhes</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-
 
 
   </main>
@@ -1061,16 +806,28 @@
             <a class="nav-link py-1 px-2 me-2" href="https://www.linkedin.com/in/ad%C3%A9rito-de-barros-798bb2229/"
               target="_blank">LinkedIn</a>
             <a class="nav-link py-1 px-2 me-2" href="https://wa.me/+258841357516" target="_blank">Whatsapp</a>
+            <a class="nav-link py-1 px-2 me-2" href="https://github.com/aderitodebarros" target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
       </div>
       <p class="nav fs-sm pt-3 pb-2 pb-lg-0 mb-0">
         <span class="text-body-secondary">&copy; Todos os direitos reservados. Feito por</span>
-        <a class="nav-link fw-normal p-0 ms-1" href="#" target="_blank" rel="noopener">Adérito De Barros</a>
+        <a class="nav-link fw-normal p-0 ms-1" href="https://www.linkedin.com/in/ad%C3%A9rito-de-barros-798bb2229/" target="_blank" rel="noopener">Adérito De Barros</a>
       </p>
+      <p class="p-meta mt-2 mb-0">// feito à mão, sem frameworks pesados &middot; <a href="https://github.com/aderitodebarros/aderitodebarros.github.io" target="_blank" rel="noopener">ver código-fonte</a></p>
     </div>
   </footer>
 
+
+  <!-- Command palette (⌘K) -->
+  <div class="p-cmdk" id="cmdk" hidden>
+    <div class="p-cmdk-backdrop"></div>
+    <div class="p-cmdk-panel" role="dialog" aria-modal="true" aria-label="Paleta de comandos">
+      <input class="p-cmdk-input" type="text" placeholder="Escreve um comando ou secção…" aria-label="Comando">
+      <ul class="p-cmdk-list" role="listbox"></ul>
+      <div class="p-cmdk-foot"><span><kbd>↑↓</kbd> navegar</span><span><kbd>↵</kbd> abrir</span><span><kbd>esc</kbd> fechar</span></div>
+    </div>
+  </div>
 
   <!-- Back to top button -->
   <a class="btn-scroll-top" href="#top" data-scroll="" aria-label="Scroll back to top">
@@ -1084,12 +841,14 @@
 
   <!-- Vendor scripts: JS libraries and plugins -->
   <script src="around.createx.studio/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="around.createx.studio/assets/vendor/parallax-js/dist/parallax.min.js"></script>
   <script src="around.createx.studio/assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="around.createx.studio/assets/vendor/aos/dist/aos.js"></script>
 
   <!-- Bootstrap + Theme scripts -->
   <script src="around.createx.studio/assets/js/theme.min.js"></script>
+
+  <!-- Premium interactions -->
+  <script defer src="assets/js/premium.js"></script>
 
 
 </body>
